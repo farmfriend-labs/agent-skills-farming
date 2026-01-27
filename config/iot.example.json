@@ -1,0 +1,117 @@
+{
+  "devices": [
+    {
+      "id": "iot-001",
+      "type": "irrigation_controller",
+      "name": "Smart Irrigation Controller 1",
+      "field_id": "field-1",
+      "zones": 4,
+      "sensors": {
+        "flow_rate": {"unit": "gpm", "range": [0, 50]},
+        "pressure": {"unit": "PSI", "range": [0, 80]},
+        "valve_status": {"values": ["closed", "opening", "open", "closing"]},
+        "moisture_z1": {"unit": "%", "range": [0, 100]},
+        "moisture_z2": {"unit": "%", "range": [0, 100]},
+        "moisture_z3": {"unit": "%", "range": [0, 100]},
+        "moisture_z4": {"unit": "%", "range": [0, 100]}
+      },
+      "actions": {
+        "open_valve": {"zones": [1, 2, 3, 4]},
+        "close_valve": {"zones": [1, 2, 3, 4]},
+        "set_pressure": {"range": [20, 60], "unit": "PSI"},
+        "emergency_shutoff": {}
+      },
+      "message_interval": 60
+    },
+    {
+      "id": "iot-002",
+      "type": "climate_controller",
+      "name": "Greenhouse Climate Control",
+      "location_id": "greenhouse-1",
+      "sensors": {
+        "temperature": {"unit": "F", "range": [40, 110]},
+        "humidity": {"unit": "%", "range": [20, 95]},
+        "co2_level": {"unit": "ppm", "range": [300, 1200]},
+        "light_level": {"unit": "lux", "range": [0, 100000]},
+        "vent_position": {"unit": "%", "range": [0, 100]},
+        "heater_status": {"values": ["off", "heating", "idle"]},
+        "cooler_status": {"values": ["off", "cooling", "idle"]},
+        "humidifier_status": {"values": ["off", "humidifying", "idle"]}
+      },
+      "actions": {
+        "set_temperature": {"range": [50, 90], "unit": "F"},
+        "set_humidity": {"range": [40, 80], "unit": "%"},
+        "set_co2": {"range": [400, 1000], "unit": "ppm"},
+        "open_vents": {"position": 0},
+        "close_vents": {"position": 100},
+        "emergency_override": {}
+      },
+      "message_interval": 30
+    },
+    {
+      "id": "iot-003",
+      "type": "livestock_monitor",
+      "name": "Livestock Tracking Monitor",
+      "location_id": "barn-1",
+      "sensors": {
+        "animal_count": {"range": [0, 200]},
+        "temperature": {"unit": "F", "range": [30, 100]},
+        "humidity": {"unit": "%", "range": [30, 90]},
+        "water_level": {"unit": "%", "range": [0, 100]},
+        "feed_level": {"unit": "%", "range": [0, 100]},
+        "motion_detected": {"values": ["none", "low", "medium", "high"]}
+      },
+      "actions": {
+        "alert_low_feed": {},
+        "alert_low_water": {},
+        "alert_temperature_extreme": {"threshold": {"low": 40, "high": 85}},
+        "emergency_ventilation": {}
+      },
+      "message_interval": 120
+    },
+    {
+      "id": "iot-004",
+      "type": "storage_monitor",
+      "name": "Grain Bin Monitor",
+      "location_id": "grain-bin-1",
+      "sensors": {
+        "level": {"unit": "%", "range": [0, 100]},
+        "temperature_top": {"unit": "F", "range": [20, 100]},
+        "temperature_middle": {"unit": "F", "range": [20, 100]},
+        "temperature_bottom": {"unit": "F", "range": [20, 100]},
+        "moisture": {"unit": "%", "range": [8, 20]},
+        "aeration_status": {"values": ["off", "running"]},
+        "aeration_rpm": {"unit": "RPM", "range": [0, 1800]}
+      },
+      "actions": {
+        "start_aeration": {},
+        "stop_aeration": {},
+        "set_aeration_speed": {"range": [500, 1800], "unit": "RPM"},
+        "alert_temperature_high": {"threshold": 90},
+        "alert_moisture_high": {"threshold": 18},
+        "alert_moisture_low": {"threshold": 12}
+      },
+      "message_interval": 60
+    },
+    {
+      "id": "iot-005",
+      "type": "gate_controller",
+      "name": "Main Gate Controller",
+      "location_id": "gate-main",
+      "sensors": {
+        "gate_status": {"values": ["closed", "opening", "open", "closing"]},
+        "vehicle_detected": {"values": ["none", "truck", "tractor", "unknown"]},
+        "battery_level": {"unit": "%", "range": [0, 100]},
+        "signal_strength": {"unit": "%", "range": [0, 100]}
+      },
+      "actions": {
+        "open_gate": {},
+        "close_gate": {},
+        "lock_gate": {},
+        "unlock_gate": {},
+        "emergency_open": {}
+      },
+      "message_interval": 300
+    }
+  ]
+}

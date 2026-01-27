@@ -1,0 +1,101 @@
+{
+  "tractors": [
+    {
+      "id": "tractor-1",
+      "name": "John Deere 8R 410",
+      "manufacturer": "John Deere",
+      "model": "8R 410",
+      "year": 2023,
+      "engine_hours": 1250,
+      "sensors": {
+        "rpm": {"range": [800, 2200], "unit": "RPM"},
+        "fuel_level": {"range": [0, 100], "unit": "%"},
+        "coolant_temp": {"range": [150, 220], "unit": "F"},
+        "hydraulic_temp": {"range": [100, 200], "unit": "F"},
+        "intake_temp": {"range": [50, 120], "unit": "F"},
+        "oil_pressure": {"range": [10, 80], "unit": "PSI"},
+        "pto_status": {"values": ["off", "on", "engaging"]},
+        "pto_speed": {"range": [540, 1000], "unit": "RPM"}
+      },
+      "telemetry_interval": 5
+    },
+    {
+      "id": "tractor-2",
+      "name": "Case IH Magnum 340",
+      "manufacturer": "Case IH",
+      "model": "Magnum 340",
+      "year": 2022,
+      "engine_hours": 2100,
+      "sensors": {
+        "rpm": {"range": [800, 2100], "unit": "RPM"},
+        "fuel_level": {"range": [0, 100], "unit": "%"},
+        "coolant_temp": {"range": [140, 220], "unit": "F"},
+        "hydraulic_temp": {"range": [95, 195], "unit": "F"},
+        "pto_status": {"values": ["off", "on", "engaging"]},
+        "pto_speed": {"range": [540, 1000], "unit": "RPM"}
+      },
+      "telemetry_interval": 5
+    }
+  ],
+  "planters": [
+    {
+      "id": "planter-1",
+      "name": "Case IH 2150",
+      "manufacturer": "Case IH",
+      "model": "2150 Early Riser",
+      "year": 2023,
+      "rows": 24,
+      "row_spacing_inches": 30,
+      "sensors": {
+        "depth": {"range": [0, 4], "unit": "inches"},
+        "rate_seeds_per_acre": {"range": [28000, 45000], "unit": "seeds/acre"},
+        "downforce": {"range": [0, 500], "unit": "lbs"},
+        "pressure": {"range": [0, 30], "unit": "PSI"},
+        "speed": {"range": [3, 7], "unit": "mph"},
+        "row_units": {"type": "array", "count": 24, "states": ["up", "down"]},
+        "singulation": {"range": [95, 100], "unit": "%"}
+      },
+      "telemetry_interval": 1
+    }
+  ],
+  "sprayers": [
+    {
+      "id": "sprayer-1",
+      "name": "John Deere R4045",
+      "manufacturer": "John Deere",
+      "model": "R4045 Self-Propelled Sprayer",
+      "year": 2023,
+      "boom_width_feet": 120,
+      "tank_size_gallons": 1200,
+      "sensors": {
+        "rate": {"range": [5, 30], "unit": "gpa"},
+        "pressure": {"range": [20, 90], "unit": "PSI"},
+        "flow_rate": {"range": [10, 50], "unit": "gpm"},
+        "speed": {"range": [5, 15], "unit": "mph"},
+        "tank_level": {"range": [0, 100], "unit": "%"},
+        "nozzle_pressure": {"range": [20, 90], "unit": "PSI"}
+      },
+      "telemetry_interval": 2
+    }
+  ],
+  "combines": [
+    {
+      "id": "combine-1",
+      "name": "AGCO X9 1100",
+      "manufacturer": "AGCO",
+      "model": "X9 1100",
+      "year": 2023,
+      "engine_hours": 850,
+      "sensors": {
+        "yield": {"range": [50, 250], "unit": "bu/ac"},
+        "moisture": {"range": [12, 25], "unit": "%"},
+        "speed": {"range": [2, 5], "unit": "mph"},
+        "throughput": {"range": [3000, 12000], "unit": "bu/hr"},
+        "loss": {"range": [0, 5], "unit": "%"},
+        "engine_load": {"range": [30, 100], "unit": "%"},
+        "grain_tank_level": {"range": [0, 100], "unit": "%"}
+      },
+      "telemetry_interval": 2
+    }
+  ]
+}
