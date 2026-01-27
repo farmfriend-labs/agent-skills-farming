@@ -14,20 +14,122 @@ Provide farmers with open source AI skills that automate agricultural operations
 
 AgentSkills is a skill format for autonomous AI assistants. Skills extend AI capabilities with specialized knowledge, tools, and behaviors for specific domains.
 
-**Skill Structure:**
+---
+
+## Skill Directory Structure
+
+Each skill is a self-contained directory with all necessary files:
+
 ```
 skill-name/
 ├── SKILL.md              # Skill definition and instructions
 ├── tools.json            # Tool configurations (optional)
+├── .env.example          # Environment variables template for credentials
+├── scripts/              # Helper scripts and utilities
 ├── examples/             # Example outputs and use cases
-└── references/          # Documentation and reference materials
+├── references/           # Documentation and reference materials
+└── resources/           # Templates, configs, data files
+```
+
+---
+
+## SKILL.md Format
+
+Each skill must include a `SKILL.md` file that follows this structure:
+
+```markdown
+# Skill Name
+
+Brief description of what this skill does.
+
+## Purpose
+
+Detailed explanation of skill's purpose and goals.
+
+## Capabilities
+
+List of specific capabilities and use cases.
+
+## Instructions
+
+How the AI agent should use this skill.
+
+## Tools
+
+Any tools this skill uses or requires.
+
+## Environment Variables
+
+Required credentials or configuration (see .env.example).
+
+## Examples
+
+Example usage scenarios.
+
+## References
+
+Links to documentation, research, or external resources.
+```
+
+---
+
+## .env.example Format
+
+Each skill should include a `.env.example` file that documents required credentials and configuration:
+
+```bash
+# Weather API Key (optional - uses wttr.in by default)
+WEATHER_API_KEY=your_api_key_here
+
+# Soil database API (optional)
+SOIL_DB_API_KEY=your_api_key_here
+
+# Local configuration
+SKILL_DEBUG=false
+SKILL_LOG_LEVEL=info
+```
+
+Usage:
+```bash
+# Copy example to create actual .env file
+cp .env.example .env
+
+# Edit with your credentials
+nano .env
+
+# .env is in .gitignore - never commit actual credentials
+```
+
+---
+
+## tools.json Format
+
+Optional JSON file defining tool configurations:
+
+```json
+{
+  "name": "skill-name",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "check_weather",
+      "description": "Check current weather conditions",
+      "command": "weather-check",
+      "params": ["location", "units"]
+    }
+  ],
+  "dependencies": [
+    {"name": "curl", "required": true},
+    {"name": "jq", "required": false}
+  ]
+}
 ```
 
 ---
 
 ## Skill Categories
 
-This repository will contain skills for the following agricultural domains:
+This repository contains skills for the following agricultural domains:
 
 - **Weather Monitoring** - Real-time weather tracking, freeze alerts, thaw windows
 - **Farm Rehabilitation** - Post-freeze damage assessment and recovery
@@ -53,7 +155,7 @@ cd agent-skills-farming
 
 ```bash
 # Copy skill to FF-Terminal skills directory
-cp -r skill/weather-monitoring ~/.ff-terminal/skills/
+cp -r skills/weather-monitoring ~/.ff-terminal/skills/
 
 # Load skill via FF-Terminal
 ff-terminal --load-skill weather-monitoring
@@ -65,135 +167,58 @@ Skills use standard AgentSkills.io format and work with compatible agents:
 
 ```bash
 # Load skill into agent context
-agent --skill ./skill/weather-monitoring
+agent --skill ./skills/weather-monitoring
 
 # Or copy to agent skills directory
-cp -r skill/weather-monitoring ~/.agent/skills/
+cp -r skills/weather-monitoring ~/.agent/skills/
 ```
 
 ---
 
-## Skill Structure
+## Development Guidelines
 
-### SKILL.md Format
+### Creating a New Skill
 
-```markdown
-# Skill Name
+1. Create directory: `skills/your-skill-name/`
+2. Create `SKILL.md` with proper format
+3. Add `.env.example` for any credentials needed
+4. Create `scripts/` for any helper utilities
+5. Add `examples/` with usage scenarios
+6. Document `references/` with supporting materials
+7. Add skill to this README under appropriate category
 
-Brief description of what this skill does.
+### Skill Requirements
 
-## Purpose
+- **SKILL.md**: Required - defines skill behavior
+- **.env.example**: Required if skill uses credentials/APIs
+- **scripts/**: Optional - helper scripts
+- **examples/**: Optional - usage examples
+- **references/**: Optional - documentation
+- **resources/**: Optional - templates, configs
 
-Detailed explanation of the skill's purpose and goals.
+### Environment Variables
 
-## Capabilities
-
-List of specific capabilities and use cases.
-
-## Instructions
-
-How the agent should use this skill.
-
-## Tools
-
-Any tools this skill uses or requires.
-
-## Examples
-
-Example usage scenarios.
-```
-
-### tools.json Format
-
-```json
-{
-  "tools": [
-    {
-      "name": "weather_check",
-      "description": "Check current weather conditions",
-      "parameters": {
-        "location": "string (optional)",
-        "units": "string (celsius/fahrenheit)"
-      }
-    }
-  ]
-}
-```
-
----
-
-## Development
-
-### Creating New Skills
-
-1. Create skill directory: `skill/my-new-skill/`
-2. Add `SKILL.md` with skill definition
-3. Add `tools.json` if needed
-4. Add examples in `examples/` directory
-5. Submit pull request
-
-### Skill Guidelines
-
-- Purpose-focused: Each skill solves a specific farming problem
-- Practical: Real-world use cases, not theoretical
-- Documented: Clear instructions and examples
-- Tested: Verify skills work with FF-Terminal
-- Sustainable: Align with natural farming principles
+- Use `.env.example` to document required variables
+- Add `.env` to `.gitignore` (never commit credentials)
+- Provide clear instructions in SKILL.md for setup
 
 ---
 
 ## Contributing
 
-We welcome contributions from farmers, AI researchers, and agricultural technologists.
+We welcome contributions! To add a skill:
 
-### How to Contribute
+1. Fork this repository
+2. Create a new skill directory following the structure above
+3. Add skill to README under appropriate category
+4. Submit a pull request
 
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/my-skill`
-3. Add your skill following the skill structure
-4. Test with FF-Terminal or compatible agent
-5. Submit pull request with description
-
-### Contribution Areas
-
-- New farming skills
-- Improved documentation
-- Example use cases
-- Bug fixes
-- Performance optimizations
-- Translations (multi-language support)
-
----
-
-## Roadmap
-
-### Phase 1: Core Skills (Q1 2026)
-- [ ] Weather monitoring skills
-- [ ] Farm rehabilitation skills
-- [ ] JADAM basic skills
-- [ ] Worm farming skills
-- [ ] Ferment tracking skills
-
-### Phase 2: Expansion (Q2 2026)
-- [ ] Crop management skills
-- [ ] IoT sensor integration
-- [ ] Automated alerts
-- [ ] Data visualization
-- [ ] Mobile compatibility
-
-### Phase 3: AI Enhancement (Q3 2026)
-- [ ] Predictive analytics
-- [ ] Decision support
-- [ ] Anomaly detection
-- [ ] Multi-farm coordination
-- [ ] Resource optimization
-
-### Phase 4: Ecosystem (Q4 2026)
-- [ ] Community marketplace
-- [ ] Skill validation system
-- [ ] Contribution rewards
-- [ ] Partner integrations
-- [ ] Regional adaptations
+Guidelines:
+- Skills must work offline whenever possible
+- Use plain language, no jargon
+- Include clear setup instructions
+- Document all environment variables
+- Provide working examples
 
 ---
 
