@@ -1,0 +1,134 @@
+{
+  "name": "nanobana-image-generator",
+  "version": "1.0.0",
+  "description": "Google Gemini 2.5 Flash Image (Nano Banana) model for generating, editing, and creating AI-powered visual content including infographics, product photos, illustrations, and more.",
+  "tools": [
+    {
+      "name": "generate-image",
+      "description": "Generate image from text description using Nano Banana model",
+      "command": "python scripts/generator.py --prompt",
+      "params": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": true,
+          "description": "Natural language description of desired image"
+        },
+        {
+          "name": "aspect_ratio",
+          "type": "string",
+          "required": false,
+          "default": "1:1",
+          "description": "Aspect ratio (1:1, 16:9, 21:9, etc.)"
+        },
+        {
+          "name": "resolution",
+          "type": "string",
+          "required": false,
+          "default": "2K",
+          "description": "Image resolution (1K, 2K, 4K)"
+        },
+        {
+          "name": "model",
+          "type": "string",
+          "required": false,
+          "default": "gemini-2.5-flash-image",
+          "description": "Model to use (gemini-2.5-flash-image or gemini-3-pro-image-preview)"
+        },
+        {
+          "name": "use_search",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Enable Google Search grounding for real-time data"
+        }
+      ],
+      "returns": "Generated image with file path and metadata"
+    },
+    {
+      "name": "edit-image",
+      "description": "Edit existing image using text prompts",
+      "command": "python scripts/generator.py --edit --prompt",
+      "params": [
+        {
+          "name": "image_path",
+          "type": "string",
+          "required": true,
+          "description": "Path to reference image to edit"
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "required": true,
+          "description": "Edit instructions (add, remove, modify elements)"
+        },
+        {
+          "name": "preserve_style",
+          "type": "boolean",
+          "required": false,
+          "default": true,
+          "description": "Maintain original style, lighting, composition"
+        }
+      ],
+      "returns": "Edited image with file path"
+    },
+    {
+      "name": "multi-turn-chat",
+      "description": "Create multi-turn conversation for iterative image refinement",
+      "command": "python scripts/generator.py --multi-turn",
+      "params": [
+        {
+          "name": "initial_prompt",
+          "type": "string",
+          "required": true,
+          "description": "Starting prompt for conversation"
+        },
+        {
+          "name": "iterations",
+          "type": "integer",
+          "required": false,
+          "default": 3,
+          "description": "Number of refinement iterations"
+        }
+      ],
+      "returns": "Conversation history with all generated images"
+    },
+    {
+      "name": "batch-generate",
+      "description": "Generate multiple images in batch",
+      "command": "python scripts/generator.py --batch",
+      "params": [
+        {
+          "name": "prompts",
+          "type": "array",
+          "required": true,
+          "description": "List of image generation prompts"
+        },
+        {
+          "name": "common_config",
+          "type": "object",
+          "required": false,
+          "description": "Shared configuration (aspect ratio, resolution) for all images"
+        }
+      ],
+      "returns": "Array of generated images with metadata"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "python3",
+      "required": true,
+      "min_version": "3.8"
+    },
+    {
+      "name": "google-generativeai",
+      "required": true,
+      "install": "pip install google-generativeai"
+    },
+    {
+      "name": "Pillow",
+      "required": true,
+      "install": "pip install Pillow"
+    }
+  ]
+}

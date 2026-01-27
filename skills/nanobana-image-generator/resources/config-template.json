@@ -1,0 +1,123 @@
+{
+  "skill_name": "nanobana-image-generator",
+  "version": "1.0.0",
+  "description": "Google Gemini 2.5 Flash Image (Nano Banana) model wrapper",
+  "api": {
+    "provider": "Google AI",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "auth_method": "API_KEY"
+  },
+  "models": {
+    "standard": {
+      "name": "gemini-2.5-flash-image",
+      "display_name": "Nano Banana (Standard)",
+      "description": "Fast generation, high-fidelity, speed optimized",
+      "use_case": "Rapid iteration, batch processing, prototyping"
+    },
+    "pro": {
+      "name": "gemini-3-pro-image-preview",
+      "display_name": "Nano Banana Pro",
+      "description": "Ultra-high-fidelity, professional grade",
+      "use_case": "Final production, commercial use, high-detail"
+    }
+  },
+  "aspect_ratios": {
+    "1:1": {
+      "display_name": "Square",
+      "dimensions": "1024x1024 (1K), 2048x2048 (2K), 4096x4096 (4K)",
+      "best_for": "Profile images, thumbnails, social media posts"
+    },
+    "16:9": {
+      "display_name": "Landscape",
+      "dimensions": "1280x720 (1K), 2560x1440 (2K), 5120x2880 (4K)",
+      "best_for": "Infographics, presentations, YouTube thumbnails"
+    },
+    "21:9": {
+      "display_name": "Ultrawide",
+      "dimensions": "1536x640 (1K), 3072x1280 (2K), 6144x2560 (4K)",
+      "best_for": "Wide infographics, dashboard screenshots"
+    },
+    "9:16": {
+      "display_name": "Portrait",
+      "dimensions": "720x1280 (1K), 1440x2560 (2K), 2880x5120 (4K)",
+      "best_for": "Instagram Reels, TikTok, mobile screens"
+    },
+    "4:3": {
+      "display_name": "Traditional Photo",
+      "dimensions": "1024x768 (1K), 2048x1536 (2K), 4096x3072 (4K)",
+      "best_for": "Product photography, classic photos"
+    },
+    "3:4": {
+      "display_name": "Vertical Photo",
+      "dimensions": "768x1024 (1K), 1536x2048 (2K), 3072x4096 (4K)",
+      "best_for": "Portraits, vertical product shots"
+    }
+  },
+  "resolutions": {
+    "1K": {
+      "width": 1024,
+      "height": 1024,
+      "description": "Fast generation, good for previews",
+      "use_case": "Rapid iteration, concept testing"
+    },
+    "2K": {
+      "width": 2048,
+      "height": 2048,
+      "description": "High quality, recommended for most use cases",
+      "use_case": "Final images, presentations, documentation"
+    },
+    "4K": {
+      "width": 4096,
+      "height": 4096,
+      "description": "Maximum detail, slower generation",
+      "use_case": "Professional production, print, high-detail work"
+    }
+  },
+  "defaults": {
+    "model": "gemini-2.5-flash-image",
+    "aspect_ratio": "1:1",
+    "resolution": "2K"
+  },
+  "features": {
+    "text_to_image": {
+      "enabled": true,
+      "description": "Generate images from natural language descriptions"
+    },
+    "image_editing": {
+      "enabled": true,
+      "description": "Edit existing images with text prompts",
+      "reference_images_max": 14
+    },
+    "multi_turn_conversation": {
+      "enabled": true,
+      "description": "Iterative refinement through conversation",
+      "max_turns": 10
+    },
+    "search_grounding": {
+      "enabled": true,
+      "description": "Use Google Search for real-time data in prompts",
+      "search_region": "US"
+    },
+    "thinking_mode": {
+      "enabled": true,
+      "description": "Enable reasoning for complex prompts",
+      "models": ["gemini-3-pro-image-preview"]
+    },
+    "batch_generation": {
+      "enabled": true,
+      "description": "Generate multiple images from array of prompts",
+      "max_batch_size": 10
+    },
+    "character_consistency": {
+      "enabled": true,
+      "description": "Maintain character across multiple images",
+      "reference_images_max": 14
+    }
+  },
+  "output": {
+    "directory": "outputs/images",
+    "format": "png",
+    "include_metadata": true,
+    "metadata_fields": ["prompt", "model", "resolution", "aspect_ratio", "timestamp"]
+  }
+}
