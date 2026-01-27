@@ -184,7 +184,21 @@ Emergency equipment diagnostics without dealer tools, providing farmers with imm
 
 #### 3. Data Synthesis Dashboard
 
+![Data Synthesis Dashboard](images/data-synthesis-dashboard-header.jpg)
+
 Unified dashboard that synthesizes equipment, weather, operations, and farm data into actionable intelligence for agricultural decision-making.
+
+**Capabilities:**
+- Real-time data aggregation from multiple sources
+- Unified KPIs and performance metrics
+- Actionable recommendations based on data analysis
+- Field-specific reports and historical trends
+- Equipment status and performance monitoring
+- Weather forecasts with operational recommendations
+- Mobile-friendly interface for field access
+- Customizable dashboards and widgets
+
+**Use Case:** Farmers currently check multiple systems for data - GPS guidance on one screen, yield monitor on another, weather on a tablet. This skill provides a single unified dashboard with all critical information and actionable intelligence for informed decisions.
 
 ---
 
