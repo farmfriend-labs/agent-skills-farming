@@ -361,61 +361,192 @@ Optimize critical operations timing for weather conditions and operational effic
 
 #### 11. Plug and Play Precision Agriculture
 
+![Plug and Play Precision Agriculture](images/plug-and-play-precision-ag-header.jpg)
+
 Simple, affordable precision agriculture setup for smaller operations that works out of the box without technical expertise.
+
+**Capabilities:**
+- Easy installation with plug-and-play components
+- Hardware compatibility with multiple brands
+- Simplified setup without technical expertise
+- Straighter rows and reduced overlap
+- Input savings and yield increase
+- Affordable pricing
+- Works out of the box
+
+**Use Case:** Small farmers can implement precision agriculture without expensive systems, technical expertise, or complex setup - just plug in components and start using.
 
 ---
 
 #### 12. Mixed Fleet Coordinator
 
+![Mixed Fleet Coordinator](images/mixed-fleet-coordinator-header.jpg)
+
 Coordinate mixed-brand smaller equipment for efficient operations with basic communication and data sharing.
+
+**Capabilities:**
+- Basic equipment communication setup
+- Shared calendar view
+- Equipment assignment recommendations
+- Simple status board
+- Field task lists
+- Multi-brand coordination
+- Basic data sharing
+
+**Use Case:** Small operations with mixed-brand equipment can coordinate basic operations without expensive systems, improving scheduling and efficiency.
 
 ---
 
 #### 13. Repair Decision Assistant
 
+![Repair Decision Assistant](images/repair-decision-assistant-header.jpg)
+
 Help farmers make informed repair vs replace decisions for equipment using comprehensive analysis of costs, age, and utilization.
+
+**Capabilities:**
+- Analyze equipment factors (age, value, repair history, remaining life)
+- Repair vs replace cost comparison
+- Decision flowcharts with yes/no paths
+- Downtime impact analysis
+- Confidence scores and recommendations
+- 5-year cost projections
+- Risk assessment
+
+**Use Case:** Farmers facing equipment repair can make informed decisions by comparing repair costs to equipment value, analyzing historical repairs, and projecting 5-year costs of both options.
 
 ---
 
 #### 14. Actionable Weather Alerts
 
+![Actionable Weather Alerts](images/actionable-weather-alerts-header.jpg)
+
 Weather alerts with specific, actionable recommendations for farm operations - not generic forecasts but specific guidance on when to spray, plant, or protect.
+
+**Capabilities:**
+- Weather condition analysis
+- Specific actionable recommendations
+- Severity level indicators (proceed, caution, delay, cancel)
+- Impact assessment (crop, equipment, labor)
+- Decision timelines
+- Weather icon library
+- Real-time alerts
+
+**Use Case:** Farmers receive specific actions (Cancel spray application, rain in 3 hours) rather than generic forecasts (Chance of rain), enabling better operational decisions.
 
 ---
 
 #### 15. Input Cost Opportunist
 
+![Input Cost Opportunist](images/input-cost-opportunist-header.jpg)
+
 Find opportunities for input cost savings through timing and market analysis, identifying optimal buying windows for fertilizer, seed, chemicals, and fuel.
+
+**Capabilities:**
+- Monitor price trends (fertilizer, seed, chemicals, fuel)
+- Identify optimal buying windows
+- Calculate early vs late purchase savings
+- Quantity discount opportunities
+- Purchase calendar with target prices
+- Annual savings calculator
+- Market trend analysis
+
+**Use Case:** Farmers can identify optimal buying times and save 30-50% on inputs by timing purchases when prices are lowest, avoiding seasonal price spikes.
 
 ---
 
 #### 16. Field History Intelligence
 
+![Field History Intelligence](images/field-history-intelligence-header.jpg)
+
 Track and analyze field history data for informed decisions, maintaining comprehensive records of yield, inputs, pests, soil tests, and operations.
+
+**Capabilities:**
+- Track all field data categories (yield, inputs, pests, soil tests, weather, operations)
+- Data visualization (yield maps, soil test trends, pest patterns)
+- Extract intelligence insights (best varieties, optimal timing, problem areas)
+- Historical data preservation
+- Decision support from history
+- Multi-season analysis
+- Data layering for comprehensive view
+
+**Use Case:** Farmers maintain comprehensive field history and extract insights to make informed decisions about varieties, timing, and inputs based on historical performance.
 
 ---
 
 #### 17. Local Market Connector
 
+![Local Market Connector](images/local-market-connector-header.jpg)
+
 Connect farmers with local markets, buyers, and selling opportunities including farmers markets, CSA subscriptions, restaurants, and wholesale buyers.
+
+**Capabilities:**
+- Market type identification (farmers markets, CSA, restaurants, wholesale)
+- Channel characteristics and requirements
+- Connection timelines and relationship building
+- Market match matrix (crop types to buyer needs)
+- Revenue diversification analysis
+- Multi-channel support
+- Local market network
+
+**Use Case:** Farmers connect with diverse local markets and buyers, creating multiple revenue streams and reducing dependency on single market channels.
 
 ---
 
 #### 18. Grant Money Finder
 
+![Grant Money Finder](images/grant-money-finder-header.jpg)
+
 Find agricultural grants and funding opportunities including USDA programs, state agricultural grants, conservation programs, and research grants.
+
+**Capabilities:**
+- Grant category tracking (USDA, state, conservation, research, equipment)
+- Grant examples with funding amounts
+- Application process timelines
+- Success rate analysis by grant type
+- Opportunity calendar with deadlines
+- Application guidance
+- Funding thermometers
+
+**Use Case:** Farmers find and track grant funding opportunities with application deadlines, success rates, and guidance for complex application processes.
 
 ---
 
 #### 19. Invisible Data Logger
 
+![Invisible Data Logger](images/invisible-data-logger-header.jpg)
+
 Log farm data without expensive proprietary equipment using low-cost alternatives like Raspberry Pi, Arduino, and smartphone apps.
+
+**Capabilities:**
+- Low-cost data logging alternatives
+- Hardware options (Raspberry Pi, Arduino, smartphone)
+- System setup (sensors to microcontroller to storage)
+- Data output in standard formats (CSV, web dashboards)
+- 95%+ cost savings vs proprietary systems
+- Open-source solutions
+- Self-hosted storage
+
+**Use Case:** Small farmers can log farm data without expensive proprietary equipment (John Deere GS3 $3000, Trimble $5000) using low-cost alternatives (Raspberry Pi $35, Arduino $25, free smartphone apps), saving thousands.
 
 ---
 
 #### 20. One Screen Mission Control
 
+![One Screen Mission Control](images/one-screen-mission-control-header.jpg)
+
 Single-screen operations control center for farm management, unifying GPS guidance, weather, equipment status, tasks, and alerts.
+
+**Capabilities:**
+- Unified dashboard with all critical information
+- GPS guidance display
+- Weather monitoring
+- Equipment status tracking
+- Task list and scheduling
+- Alert system
+- Mobile-friendly interface
+- Single-screen access
+
+**Use Case:** Farmers currently check multiple systems (GPS on one screen, yield monitor on another, weather on tablet, equipment on phone) - this provides a single unified dashboard with all critical information and actionable intelligence.
 
 ---
 
