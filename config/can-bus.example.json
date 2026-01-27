@@ -1,0 +1,30 @@
+{
+  "interface": "vcan0",
+  "baudrate": 250000,
+  "manufacturers": ["Universal", "John Deere", "Case IH", "AGCO", "Kubota", "CNH"],
+  "message_rate": 10,
+  "include_standard": true,
+  "include_proprietary": true,
+  "source_address_ranges": {
+    "Universal": [0, 0xFE],
+    "John Deere": [0x10, 0x1F],
+    "Case IH": [0x20, 0x2F],
+    "AGCO": [0x30, 0x3F],
+    "Kubota": [0x40, 0x4F],
+    "CNH": [0x50, 0x5F]
+  },
+  "pgn_profiles": {
+    "standard": [
+      {"pgn": 0x00F804, "name": "Address Claim", "data_length": 8},
+      {"pgn": 0x00FE00, "name": "Request PGN", "data_length": 3},
+      {"pgn": 0x00FF00, "name": "Transport Protocol", "data_length": 8},
+      {"pgn": 0x00FF84, "name": "TP Connection Management", "data_length": 8},
+      {"pgn": 0x01FF00, "name": "VT to ECU", "data_length": 8},
+      {"pgn": 0x01FF84, "name": "ECU to VT", "data_length": 8}
+    ],
+    "proprietary": [
+      {"pgn": 0x00FEF8, "name": "Proprietary A", "data_length": 8},
+      {"pgn": 0x00FEFF, "name": "Proprietary B", "data_length": 8}
+    ]
+  }
+}
