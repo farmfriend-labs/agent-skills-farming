@@ -554,61 +554,188 @@ Single-screen operations control center for farm management, unifying GPS guidan
 
 #### 21. Plant Whisperer Assistant
 
+![Plant Whisperer Assistant](images/plant-whisperer-assistant-header.jpg)
+
 Plant health monitoring and advice for gardens and small farms, providing early detection of nutrient deficiencies, pests, and disease.
+
+**Capabilities:**
+- Early detection of nutrient deficiencies
+- Pest and disease identification
+- Treatment recommendations
+- Plant anatomy understanding
+- Diagnosis flowcharts from symptoms
+- Organic solutions
+- Growth stage monitoring
+
+**Use Case:** Gardeners and small farmers receive early plant health alerts (yellowing leaves, wilting, spots) with specific diagnosis and treatment recommendations before damage becomes severe.
 
 ---
 
 #### 22. Grow Timing Calendar
 
+![Grow Timing Calendar](images/grow-timing-calendar-header.jpg)
+
 Growth and harvest timing calendar for optimal planting and harvesting, showing frost dates, growing windows, and succession planting schedules.
+
+**Capabilities:**
+- Full year calendar with planting windows
+- Growing period tracking
+- Harvest window identification
+- Frost date tracking (last frost, first frost)
+- Succession planting schedules
+- Crop-specific timing (cool/warm season crops)
+- Extended season optimization
+
+**Use Case:** Farmers optimize planting and harvest timing based on frost dates, growing windows, and succession planting, maximizing yield and extending production periods.
 
 ---
 
 #### 23. Garden Layout Optimizer
 
+![Garden Layout Optimizer](images/garden-layout-optimizer-header.jpg)
+
 Optimize garden layouts for efficiency and productivity using companion planting, sun exposure analysis, and spacing optimization.
+
+**Capabilities:**
+- Design principle optimization (sun exposure, companion planting, spacing, access)
+- Layout examples (raised beds, square foot, row, contour)
+- Companion planting charts
+- Sun path diagrams
+- Efficiency gain comparisons
+- Plant compatibility analysis
+- Optimal bed placement
+
+**Use Case:** Gardeners optimize layouts for efficiency using companion planting relationships, sun exposure analysis, and proper spacing, reducing work and increasing yields.
 
 ---
 
 #### 24. Harvest Preservation Guide
 
+![Harvest Preservation Guide](images/harvest-preservation-guide-header.jpg)
+
 Food preservation techniques and timing for extending harvest bounty, covering canning, freezing, drying, fermenting, and root cellaring.
+
+**Capabilities:**
+- Multiple preservation methods (canning, freezing, drying, fermenting, root cellar)
+- Crop-specific best practices
+- Harvest timing at peak ripeness
+- Equipment requirements (jars, freezer bags, dehydrator, fermentation crocks)
+- Quality preservation timelines
+- Shelf life optimization
+- Food safety guidance
+
+**Use Case:** Farmers extend harvest bounty by preserving at peak quality using various methods, reducing waste and ensuring year-round food availability.
 
 ---
 
 #### 25. Soil Health Builder
 
+![Soil Health Builder](images/soil-health-builder-header.jpg)
+
 Build and maintain healthy soil for sustainable agriculture using compost, cover crops, reduced tillage, and organic amendments.
+
+**Capabilities:**
+- Track soil health components (organic matter, pH, nutrients, structure, biology)
+- Identify soil problems (compaction, depletion, imbalance, erosion)
+- Improvement strategies (compost, cover crops, reduced tillage, organic amendments)
+- Monitoring methods (soil tests, visual assessment, earthworm count)
+- Healthy vs degraded soil comparisons
+- Long-term soil building plans
+
+**Use Case:** Farmers build and maintain healthy soil through targeted improvements (compost, cover crops, reduced tillage) to reverse degradation and restore productivity sustainably.
 
 ---
 
 #### 26. Seed Sovereignty Guide
 
+![Seed Sovereignty Guide](images/seed-sovereignty-guide-header.jpg)
+
 Seed saving and sovereignty guidance for independence, explaining heirloom varieties, open-pollinated seed types, and cost savings from saving seeds.
+
+**Capabilities:**
+- Seed type education (heirloom, open-pollinated, hybrid, GM)
+- Seed saving techniques (dry seeds, wet seeds, biennials)
+- Storage requirements (dry, cool, dark, labeled)
+- Cost savings calculations
+- Variety preservation
+- Adaptation benefits
+- Independence from seed companies
+
+**Use Case:** Farmers save seeds from heirloom and open-pollinated varieties, achieving annual cost savings and variety preservation while building seed independence.
 
 ---
 
 #### 27. Pest Protector Organic
 
+![Pest Protector Organic](images/pest-protector-organic-header.jpg)
+
 Organic pest protection strategies for sustainable pest management using beneficial insects, neem oil, companion planting, and integrated pest management.
+
+**Capabilities:**
+- Common pest identification (aphids, caterpillars, beetles, mites, slugs)
+- Organic control methods (beneficial insects, neem oil, companion planting, traps, hand removal)
+- Prevention strategies (crop rotation, healthy soil, proper spacing, resistant varieties)
+- Application timing (early detection, repeat treatments, avoid spraying beneficials)
+- IPM pyramid interventions
+- Sustainable pest management
+
+**Use Case:** Farmers protect crops organically using beneficial insects, neem oil, and integrated pest management instead of harmful chemical pesticides, maintaining ecosystem health while controlling pests.
 
 ---
 
 #### 28. Water Wisdom Helper
 
+![Water Wisdom Helper](images/water-wisdom-helper-header.jpg)
+
 Water conservation and management for sustainable agriculture, covering irrigation efficiency, water quality, and conservation strategies.
+
+**Capabilities:**
+- Water source identification (well, municipal, rainwater, surface water)
+- Irrigation methods (drip, soaker hose, sprinkler, furrow)
+- Irrigation efficiency percentages
+- Water quality factors (pH, minerals, contaminants) and testing
+- Conservation strategies (mulching, efficient scheduling, leak detection)
+- Seasonal usage patterns
+- Reduction goals and tracking
+
+**Use Case:** Farmers optimize water management using efficient irrigation, quality testing, and conservation strategies, reducing water waste and ensuring sustainable agricultural water use.
 
 ---
 
 #### 29. Season Extension Planner
 
+![Season Extension Planner](images/season-extension-planner-header.jpg)
+
 Extend growing seasons with techniques and planning using hoop houses, cold frames, row covers, and succession planting.
+
+**Capabilities:**
+- Extension methods (hoop houses, cold frames, row covers, greenhouse, succession planting)
+- Season extension timeline (early season start, shoulder season extension, late season protection)
+- Microclimate considerations (sun exposure, wind protection, thermal mass)
+- Temperature requirements for common crops
+- Extended season calendar
+- Structure building guidance
+
+**Use Case:** Farmers extend growing seasons by 1-3 months using simple structures (cold frames, row covers, hoop houses) and succession planting, maximizing production periods.
 
 ---
 
 #### 30. Learning From Experience
 
+![Learning From Experience](images/learning-from-experience-header.jpg)
+
 Track and learn from farm experiences for continuous improvement, capturing successes, failures, experiments, and observations.
+
+**Capabilities:**
+- Experience tracking (successes, failures, experiments, observations)
+- Multiple capture methods (daily logs, photos, notes, sensor data)
+- Lesson extraction (what worked, what didn't, why, variables)
+- Knowledge base structure (searchable, categorized, season-linked)
+- Continuous improvement cycle
+- Institutional memory preservation
+- Decision support from past experiences
+
+**Use Case:** Farmers capture and learn from experiences (what worked, what didn't) to build institutional memory and continuously improve decisions based on past successes and failures.
 
 ---
 
