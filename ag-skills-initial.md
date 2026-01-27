@@ -503,7 +503,7 @@ REAL VALUE: Extends season 2-4 months, fresh food year-round worth $500+.
 
 ### 30. learning-from-experience
 
-THE PROBLEM: "I make the same mistakes every year because I forget what happened"
+THE PROBLEM: "I make same mistakes every year because I forget what happened"
 
 WHAT IT DOES:
 - EFFORTLESS record keeping:
@@ -552,40 +552,88 @@ REAL VALUE: Prevents repeated failures, compounds successes, builds confidence.
 - Lets farmers override/customize
 - No black boxes
 
----
-
-## DEVELOPMENT ROADMAP
-
-### Phase 1: Tier 3 Skills (Immediate Value)
-- Focus on small/rehab operations where we have direct experience
-- Weather protection, natural inputs, worm farming, ferments
-- Prove the concept with real farm use
-
-### Phase 2: Tier 2 Skills (Scale Up)
-- Fleet coordination, input optimization, labor allocation
-- Test on mid-sized operations
-- Refine offline-first and plain language approach
-
-### Phase 3: Tier 1 Skills (High Impact)
-- Equipment translation, emergency diagnostics, data synthesis
-- Requires hardware integration and vendor protocol work
-- Highest impact but highest complexity
+### 7. RESPECTS DATA SOVEREIGNTY
+- Farmer owns ALL data
+- Can export any time in open formats
+- Optional sharing, never required
+- No selling data to third parties
 
 ---
 
-## SUCCESS METRICS
+## THE BOTTOM LINE
 
-### Farmer-Centric
-- Does this save time?
-- Does this save money?
-- Does this reduce stress?
-- Does this prevent losses?
+The difference between original framework and this one:
 
-### Technical
-- Offline capability
-- Cross-platform integration
-- Reliability (99%+ uptime)
-- Response time (seconds, not minutes)
+**ORIGINAL:** More sensors, more data collection, fancy AI predictions, aspirational complexity
+
+**REVISED:** Make existing systems work together, turn data noise into clear actions, eliminate friction, invisible operation
+
+**ORIGINAL:** "Collect 2.75 million data points per day"
+
+**REVISED:** "You have 500K data points already - let's make them useful"
+
+**ORIGINAL:** "AI-powered carbon credit optimization"
+
+**REVISED:** "Your tractor is throwing code P0234 - here's how to fix it yourself in 30 minutes for $80"
+
+---
+
+## IMPLEMENTATION PRIORITIES
+
+### Phase 1 (Months 1-6): THE PAIN KILLERS
+- universal-equipment-translator
+- emergency-diagnostics-liberator
+- data-synthesis-dashboard
+- repair-decision-assistant
+
+### Phase 2 (Months 7-12): THE VALUE ADDS
+- subscription-cost-eliminator
+- downtime-cost-calculator
+- actionable-weather-alerts
+- one-screen-mission-control
+
+### Phase 3 (Months 13-18): THE EMPOWERMENT
+- vendor-lock-escape-kit
+- invisible-data-logger
+- local-market-connector
+- learning-from-experience
+
+---
+
+## METRICS THAT MATTER
+
+**NOT:**
+- "Data points collected"
+- "AI accuracy"
+- "Platform integrations"
+
+**BUT:**
+- Downtime hours eliminated
+- Dollars saved on repairs
+- Subscription fees eliminated
+- Harvest losses prevented
+- Time saved per week
+- Farmer confidence level ("I know what to do")
+
+---
+
+## THE REVOLUTION
+
+This isn't about making agriculture more high-tech.
+
+It's about making high-tech actually work for farmers.
+
+Making $500K of equipment they already own talk to each other and tell them what to do.
+
+Turning 500,000 daily data points into one clear action.
+
+Eliminating 28-day dealer wait that costs them their crop and their farm.
+
+Breaking vendor lock-in that forces equipment choices based on software, not need.
+
+The goal: Farm tech that works invisibly, integrates seamlessly, and puts farmers back in control.
+
+The measure of success: Farmers who say "Yeah, it just works" instead of "I don't have an IT department."
 
 ---
 
