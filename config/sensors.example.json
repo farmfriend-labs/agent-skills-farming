@@ -1,0 +1,65 @@
+{
+  "fields": [
+    {
+      "id": "field-1",
+      "name": "North Field",
+      "soil_moisture_sensors": 4,
+      "temperature_sensors": 2,
+      "ph_sensors": 1,
+      "size_acres": 120
+    },
+    {
+      "id": "field-2",
+      "name": "South Field",
+      "soil_moisture_sensors": 3,
+      "temperature_sensors": 2,
+      "ph_sensors": 1,
+      "size_acres": 85
+    },
+    {
+      "id": "field-3",
+      "name": "East Field",
+      "soil_moisture_sensors": 5,
+      "temperature_sensors": 3,
+      "ph_sensors": 2,
+      "size_acres": 200
+    }
+  ],
+  "equipment": [
+    {
+      "id": "equip-1",
+      "type": "tractor",
+      "name": "JD 8R 410",
+      "sensors": ["temperature", "fuel_level", "rpm", "hydraulic_pressure"]
+    },
+    {
+      "id": "equip-2",
+      "type": "planter",
+      "name": "Case IH 2150",
+      "sensors": ["depth", "rate", "pressure", "speed"]
+    },
+    {
+      "id": "equip-3",
+      "type": "combine",
+      "name": "AGCO X9",
+      "sensors": ["yield", "moisture", "throughput", "loss"]
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "grain-bin-1",
+      "type": "storage",
+      "name": "Grain Bin A",
+      "sensors": ["temperature", "level", "moisture", "aeration"]
+    },
+    {
+      "id": "greenhouse-1",
+      "type": "climate_control",
+      "name": "Greenhouse 1",
+      "sensors": ["temperature", "humidity", "co2", "light_level"]
+    }
+  ],
+  "update_interval_seconds": 30,
+  "data_format": "json",
+  "include_timestamp": true
+}
