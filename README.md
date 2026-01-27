@@ -166,7 +166,19 @@ Enables mixed-fleet equipment interoperability by translating between proprietar
 
 #### 2. Emergency Diagnostics Liberator
 
+![Emergency Diagnostics Liberator](images/emergency-diagnostics-liberator-header.jpg)
+
 Emergency equipment diagnostics without dealer tools, providing farmers with immediate access to diagnostic information, error code interpretation, and repair guidance when equipment fails during critical operations.
+
+**Capabilities:**
+- Real-time CAN bus diagnostics
+- Error code interpretation without dealer tools
+- Repair guidance and troubleshooting steps
+- Offline operation with cached diagnostic data
+- Support for multiple equipment brands
+- Emergency repair cost estimation
+
+**Use Case:** When equipment fails during critical harvest or planting window and dealer support is unavailable, farmers can immediately diagnose issues, understand error codes, and make informed repair decisions.
 
 ---
 
