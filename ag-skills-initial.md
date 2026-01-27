@@ -94,23 +94,113 @@ REAL VALUE: Turns data paralysis into confident decisions. Saves 10-20 hours/wee
 THE PROBLEM: "Paying $40K/year for subscriptions I use 3 months/year"
 
 WHAT IT DOES:
-- Identifies subscription usage patterns across all farm software
-- Provides alternatives (open source, one-time purchase, community tools)
-- Automates subscription cycling (activate only during usage periods)
-- Negotiates pricing based on actual usage data
-- Migrates data between platforms to reduce vendor lock-in
+- Extracts YOUR data from proprietary platforms before canceling
+- Replicates core functionality of expensive platforms using open tools
+- Creates variable rate prescriptions without FieldView subscription
+- Generates yield maps without John Deere's cloud service
+- Archives data in open formats forever (no more vendor hostage situations)
 
-REAL VALUE: Eliminates wasted subscription fees. $10K-$50K/year savings on unused software.
-
----
-
-## TIER 2: MID-SIZED OPERATIONS (500-5,000 acres)
-
-Reality: Some tech adoption, struggling with data integration, need practical automation
+REAL VALUE: $20K-$100K/year in eliminated subscription fees.
 
 ---
 
-### 5. weather-action-optimizer
+### 5. downtime-cost-calculator
+
+THE PROBLEM: "I don't know if I should fix this now or wait"
+
+WHAT IT DOES:
+- Calculates REAL cost of equipment downtime by timing (planting window vs. mid-season)
+- Estimates crop loss per hour/day of delay for current field conditions
+- Compares: repair cost + downtime loss vs. renting equipment vs. custom operator
+- Tracks equipment reliability and predicts failures BEFORE they happen
+- Recommends: fix it yourself / call independent mechanic / call dealer / rent replacement
+
+REAL VALUE: Prevents $50K-$500K losses from bad timing decisions.
+
+---
+
+### 6. fleet-intelligence-coordinator
+
+THE PROBLEM: "I have 40 machines and no idea where to deploy them"
+
+WHAT IT DOES:
+- Tracks real-time location and status of entire fleet
+- Predicts equipment needs by field (soil conditions, yield history, operation type)
+- Optimizes machine allocation: "Send Combine #3 to Field 12, it's ready and has high yield potential"
+- Prevents conflicts: "Don't send two planters to same field"
+- Calculates true per-acre equipment costs including downtime
+
+REAL VALUE: 15-25% improvement in fleet utilization, $30K-$150K/year savings.
+
+---
+
+### 7. regulatory-compliance-autopilot
+
+THE PROBLEM: "Compliance paperwork is crushing us, mistakes cost thousands"
+
+WHAT IT DOES:
+- Auto-generates required reports from existing data (EPA pesticide reports, NPDES permits)
+- Tracks changing regulations across multiple states
+- Sends deadline alerts BEFORE they're critical
+- Pre-fills forms with data from equipment/application records
+- Maintains audit-ready documentation automatically
+
+REAL VALUE: Reduces compliance staff time 40-60%, prevents $10K-$100K in fines/penalties.
+
+---
+
+### 8. vendor-lock-escape-kit
+
+THE PROBLEM: "We're trapped in John Deere's ecosystem and can't switch"
+
+WHAT IT DOES:
+- Exports ALL data from proprietary platforms in open formats
+- Converts file formats (John Deere → Trimble, Climate FieldView → AgLeader, etc.)
+- Maintains historical records independent of any vendor
+- Enables gradual migration to open/interoperable systems
+- Documents vendor restrictions and workarounds
+
+REAL VALUE: Freedom to choose best equipment/software, negotiating leverage with vendors.
+
+---
+
+### 9. actual-vs-promised-validator
+
+THE PROBLEM: "Yield monitors fail 80% of the time, promised tech doesn't work"
+
+WHAT IT DOES:
+- Validates technology performance against vendor claims
+- Identifies which sensors/systems are giving bad data
+- Compares actual ROI vs. vendor promises
+- Recommends: keep, calibrate, replace, or eliminate specific tech
+- Documents failures for warranty claims and vendor accountability
+
+REAL VALUE: Stops throwing money at non-working tech, validates $100K+ equipment investments.
+
+---
+
+### 10. critical-timing-optimizer
+
+THE PROBLEM: "Time absolutely means money - one bad decision loses the whole year"
+
+WHAT IT DOES:
+- Synthesizes weather, crop stage, equipment status, labor availability
+- Prioritizes operations by $$$ impact: "Harvest Field 3 FIRST (hail risk + premium moisture)"
+- Provides contingency plans: "If rain tomorrow, move to Field 7 instead"
+- Calculates opportunity cost of delays in real-time
+- Coordinates: harvest timing, storage decisions, delivery windows, labor scheduling
+
+REAL VALUE: $20-$100/acre through optimal timing decisions, prevents catastrophic losses.
+
+---
+
+## TIER 2: MID-SIZE PRODUCTION FARMS (100-2,000 acres)
+
+Reality: Some tech adoption, wearing multiple hats, budget-conscious, need practical ROI
+
+---
+
+### 11. weather-action-optimizer
 
 THE PROBLEM: "I get weather alerts but don't know what to actually DO with the information"
 
@@ -125,7 +215,7 @@ REAL VALUE: Optimizes field operations timing. 5-15% yield improvement from bett
 
 ---
 
-### 6. equipment-fleet-coordinator
+### 12. equipment-fleet-coordinator
 
 THE PROBLEM: "Tractor sits idle while planter waits - coordination is a nightmare"
 
@@ -140,7 +230,7 @@ REAL VALUE: Reduces equipment downtime. 10-20% more operational days per season.
 
 ---
 
-### 7. input-cost-optimizer
+### 13. input-cost-optimizer
 
 THE PROBLEM: "Input prices are crazy but I don't know what actually works on my fields"
 
@@ -155,7 +245,7 @@ REAL VALUE: Reduces input waste. 10-30% reduction in fertilizer/herbicide costs.
 
 ---
 
-### 8. labor-allocator
+### 14. labor-allocator
 
 THE PROBLEM: "Crew is sitting around while we figure out what to do next"
 
@@ -176,7 +266,7 @@ Reality: Limited tech, manual operations, need low-cost automation and practical
 
 ---
 
-### 9. freeze-protection-manager
+### 15. freeze-protection-manager
 
 THE PROBLEM: "Freeze coming and I don't know what to protect"
 
@@ -191,7 +281,7 @@ REAL VALUE: Prevents freeze damage. Saves thousands in crop/infrastructure losse
 
 ---
 
-### 10. natural-inputs-guide
+### 16. natural-inputs-guide
 
 THE PROBLEM: "JADAM sounds great but I don't know where to start"
 
@@ -206,7 +296,7 @@ REAL VALUE: Reduces chemical inputs. Saves $50-$200/acre in fertilizer/herbicide
 
 ---
 
-### 11. worm-farming-manager
+### 17. worm-farming-manager
 
 THE PROBLEM: "Worm bins are messy and I don't know if they're working"
 
@@ -221,7 +311,7 @@ REAL VALUE: Creates free fertilizer. Reduces waste, produces castings for soil h
 
 ---
 
-### 12. ferment-tracker
+### 18. ferment-tracker
 
 THE PROBLEM: "Ferment recipes are complicated and I'm afraid of ruining a batch"
 
@@ -236,7 +326,7 @@ REAL VALUE: Produces effective natural inputs. $100-$500 savings per batch vs. s
 
 ---
 
-### 13. simple-daily-log
+### 19. simple-daily-log
 
 THE PROBLEM: "I can't remember what I did last week"
 
@@ -251,7 +341,7 @@ REAL VALUE: Builds institutional memory. Prevents repeating mistakes, captures s
 
 ---
 
-### 14. equipment-scheduler
+### 20. equipment-scheduler
 
 THE PROBLEM: "I have one tractor and 10 things to do"
 
