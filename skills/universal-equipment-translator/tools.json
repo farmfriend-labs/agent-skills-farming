@@ -1,0 +1,182 @@
+{
+  "name": "universal-equipment-translator",
+  "version": "1.0.0",
+  "description": "Translates between agricultural equipment manufacturer protocols for mixed-fleet interoperability",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 1 - Industrial Operations",
+  "keywords": [
+    "CAN",
+    "ISO11783",
+    "ISOBUS",
+    "agriculture",
+    "equipment",
+    "interoperability",
+    "John Deere",
+    "Case IH",
+    "AGCO"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "can-utils",
+      "version": ">= 1.5",
+      "required": true
+    },
+    {
+      "name": "python-can",
+      "version": ">= 4.0",
+      "required": true
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "python3-cryptography",
+      "version": ">= 3.4",
+      "required": false
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "CAN Interface",
+      "options": [
+        "SocketCAN (Linux built-in)",
+        "Vector CANCaseXL",
+        "PEAK PCAN",
+        "Kvaser Leaf",
+        "NI-XNET"
+      ]
+    },
+    {
+      "name": "OBD-II to CAN adapter",
+      "options": [
+        "OBDLink",
+        "CANUSB",
+        "AGC USB-CAN"
+      ],
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "setup-can",
+      "description": "Initialize CAN interface with proper configuration",
+      "command": "scripts/setup.sh",
+      "params": ["interface", "baudrate", "type"]
+    },
+    {
+      "name": "start-translator",
+      "description": "Start protocol translation service",
+      "command": "scripts/run.sh",
+      "params": ["config_file"]
+    },
+    {
+      "name": "can-dump",
+      "description": "Capture CAN traffic for analysis",
+      "command": "scripts/test.sh",
+      "params": ["interface", "duration"]
+    },
+    {
+      "name": "identify-ecu",
+      "description": "Identify ECU manufacturer from CAN messages",
+      "command": "python3 scripts/identify_ecu.py",
+      "params": ["interface", "timeout"]
+    },
+    {
+      "name": "translate-message",
+      "description": "Translate single CAN message between protocols",
+      "command": "python3 scripts/translate.py",
+      "params": ["message", "source_protocol", "target_protocol"]
+    },
+    {
+      "name": "validate-protocol",
+      "description": "Validate CAN message against ISO 11783 standard",
+      "command": "python3 scripts/validate.py",
+      "params": ["message", "protocol_spec"]
+    }
+  ],
+
+  "supported_protocols": [
+    {
+      "name": "ISO 11783",
+      "version": "2018",
+      "description": "International standard for agricultural bus systems",
+      "standard": true
+    },
+    {
+      "name": "John Deere JDLink",
+      "version": "3.0+",
+      "description": "John Deere proprietary extension of ISO 11783",
+      "standard": false
+    },
+    {
+      "name": "Case IH AFS",
+      "version": "2.0+",
+      "description": "Case IH Advanced Farming Systems protocol",
+      "standard": false
+    },
+    {
+      "name": "AGCO AGCOMMAND",
+      "version": "1.5+",
+      "description": "AGCO command and control protocol",
+      "standard": false
+    }
+  ],
+
+  "safety_features": [
+    "Safety-critical PGN preservation",
+    "CAN bus error handling",
+    "Message rate limiting",
+    "ECU timeout detection",
+    "Manual override capability",
+    "ISO 11783 compliance validation"
+  ],
+
+  "configuration": {
+    "default_mode": "iso11783",
+    "default_baudrate": 250000,
+    "log_level": "info",
+    "offline_mode": true,
+    "safety_override_disabled": true
+  },
+
+  "api_endpoints": {
+    "manufacturer_apis": {
+      "john_deere": "https://api.deere.com",
+      "case_ih": "https://api.caseih.com",
+      "agco": "https://api.agcocorp.com"
+    },
+    "openag_consortium": "https://openag.io/api/v1"
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "manufacturer_protocols": "references/manufacturer-protocols.md",
+    "iso11783_spec": "references/iso11783-reference.md",
+    "examples": [
+      "examples/basic-translation.md",
+      "examples/jd-to-isobus.md",
+      "examples/multi-brand-setup.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "No communication between tractor and implement",
+      "Translation errors",
+      "Inconsistent behavior",
+      "Safety systems triggering"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "location": "Cedar Creek, TX",
+  "timezone": "America/Chicago",
+  "update_interval_minutes": 15,
+  "include_forecast": true,
+  "include_alerts": true,
+  "include_historical": false,
+  "gdd_base_temp": 50,
+  "gdd_max_temp": 86,
+  "et_method": "penman-monteith",
+  "alert_thresholds": {
+    "freeze": {"temperature": 32, "hours_ahead": 24},
+    "wind": {"speed_mph": 25, "hours_ahead": 12},
+    "precipitation": {"inches": 0.5, "hours_ahead": 6},
+    "heat": {"temperature": 95, "hours_ahead": 24}
+  },
+  "data_sources": {
+    "primary": "wttr.in",
+    "backup": "openweathermap",
+    "noaa_station": "720538"
+  }
+}

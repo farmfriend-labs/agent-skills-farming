@@ -1,0 +1,245 @@
+{
+  "name": "emergency-diagnostics-liberator",
+  "version": "1.0.0",
+  "description": "Emergency equipment diagnostics without dealer tools - read codes, interpret errors, and provide repair guidance",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 1 - Industrial Operations",
+  "keywords": [
+    "diagnostics",
+    "OBD-II",
+    "J1939",
+    "troubleshooting",
+    "error codes",
+    "repair",
+    "agriculture",
+    "right-to-repair"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "python-obd",
+      "version": ">= 0.7",
+      "required": true
+    },
+    {
+      "name": "python-can",
+      "version": ">= 4.0",
+      "required": false
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "pandas",
+      "version": ">= 1.3",
+      "required": false
+    },
+    {
+      "name": "matplotlib",
+      "version": ">= 3.4",
+      "required": false
+    },
+    {
+      "name": "reportlab",
+      "version": ">= 3.6",
+      "required": false
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "OBD-II/CAN Adapter",
+      "options": [
+        "ELM327 USB",
+        "ELM327 Bluetooth",
+        "OBDLink SX/MX",
+        "AGC USB-CAN",
+        "CANUSB",
+        "SocketCAN (Linux built-in)"
+      ],
+      "required": true
+    },
+    {
+      "name": "Diagnostic Port",
+      "description": "Equipment must have OBD-II or CAN diagnostic port",
+      "required": true
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "setup-database",
+      "description": "Initialize diagnostic code database with manufacturer codes",
+      "command": "python3 scripts/setup-database.py",
+      "params": []
+    },
+    {
+      "name": "start-diagnostics",
+      "description": "Start interactive diagnostic session",
+      "command": "scripts/run.sh",
+      "params": ["config_file"]
+    },
+    {
+      "name": "read-codes",
+      "description": "Read diagnostic trouble codes from equipment",
+      "command": "python3 scripts/diagnostics.py --mode read",
+      "params": ["interface", "port"]
+    },
+    {
+      "name": "interpret-code",
+      "description": "Interpret a diagnostic code with database lookup",
+      "command": "python3 scripts/diagnostics.py --mode interpret",
+      "params": ["code"]
+    },
+    {
+      "name": "monitor-sensors",
+      "description": "Monitor live sensor data from equipment",
+      "command": "python3 scripts/diagnostics.py --mode monitor",
+      "params": ["sensors"]
+    },
+    {
+      "name": "generate-report",
+      "description": "Generate diagnostic report from session",
+      "command": "python3 scripts/diagnostics.py --mode report",
+      "params": ["session_id"]
+    },
+    {
+      "name": "clear-codes",
+      "description": "Clear diagnostic codes from equipment (with safety checks)",
+      "command": "python3 scripts/diagnostics.py --mode clear",
+      "params": ["confirmation"]
+    }
+  ],
+
+  "supported_protocols": [
+    {
+      "name": "SAE J1939",
+      "version": "Current",
+      "description": "Standard protocol for heavy vehicles and agricultural equipment",
+      "standard": true
+    },
+    {
+      "name": "OBD-II",
+      "version": "Current",
+      "description": "Standard onboard diagnostics protocol",
+      "standard": true
+    },
+    {
+      "name": "ISO 15765 (UDS)",
+      "version": "Current",
+      "description": "Unified Diagnostic Services on CAN",
+      "standard": true
+    },
+    {
+      "name": "ISO 14230 (KWP2000)",
+      "version": "Current",
+      "description": "Keyword Protocol 2000",
+      "standard": true
+    }
+  ],
+
+  "supported_manufacturers": [
+    "John Deere",
+    "Case IH",
+    "AGCO",
+    "Kubota",
+    "New Holland",
+    "Claas",
+    "Challenger",
+    "Massey Ferguson",
+    "Fendt",
+    "Valtra"
+  ],
+
+  "safety_features": [
+    "Safety-critical code protection",
+    "Confirmation required for code clearing",
+    "Warning before destructive actions",
+    "Severity-level based recommendations",
+    "Professional service recommendations for critical issues",
+    "Audit logging for all actions"
+  ],
+
+  "configuration": {
+    "default_interface_type": "obd2",
+    "default_port": "/dev/ttyUSB0",
+    "default_protocol": "auto",
+    "default_manufacturer": "auto",
+    "log_level": "info",
+    "offline_mode": true,
+    "safety_override_disabled": true,
+    "require_confirmation": true,
+    "warn_before_clear": true
+  },
+
+  "code_database": {
+    "path": "/opt/emergency-diagnostics/codes.db",
+    "offline_mode": true,
+    "update_interval": 168,
+    "code_count": "500+",
+    "manufacturers": 10,
+    "categories": 8
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "examples": [
+      "examples/basic-diagnostics.md",
+      "examples/code-interpretation.md",
+      "examples/live-monitoring.md",
+      "examples/report-generation.md"
+    ],
+    "references": [
+      "references/sae-j1939.md",
+      "references/manufacturer-codes.md",
+      "references/safety-guidelines.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "Cannot connect to equipment",
+      "No codes found but equipment has problems",
+      "Codes keep returning after clearing",
+      "Incorrect code interpretation",
+      "Adapter not recognized"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  },
+
+  "legal_compliance": {
+    "right_to_repair": true,
+    "dmca_exemptions": true,
+    "warranty_compliance": true,
+    "documentation_required": true
+  },
+
+  "capabilities": {
+    "read_codes": true,
+    "interpret_codes": true,
+    "monitor_sensors": true,
+    "generate_reports": true,
+    "clear_codes": true,
+    "offline_operation": true,
+    "manufacturer_support": true,
+    "code_history": true,
+    "trend_analysis": false
+  },
+
+  "emergency_features": {
+    "immediate_diagnosis": true,
+    "offline_access": true,
+    "quick_code_lookup": true,
+    "severity_ranking": true,
+    "immediate_actions": true,
+    "report_generation": true
+  }
+}
