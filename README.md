@@ -226,43 +226,134 @@ Unified dashboard that synthesizes equipment, weather, operations, and farm data
 
 #### 4. Subscription Cost Eliminator
 
+![Subscription Cost Eliminator](images/subscription-cost-eliminator-header.jpg)
+
 Eliminate dealer subscription services and cloud dependencies by building open-source alternatives and self-hosted solutions for agricultural equipment and software.
+
+**Capabilities:**
+- Audit all subscription dependencies and costs
+- Identify open-source alternatives to paid services
+- Migrate data from dealer systems to local infrastructure
+- Set up self-hosted dashboards and analysis tools
+- Calculate ROI and annual savings
+- Eliminate ongoing subscription fees
+- Maintain data sovereignty
+
+**Use Case:** Farmers paying thousands annually for dealer subscriptions (John Deere Operations Center $500-2000/year, Case IH AFS $600-1500/year, Climate FieldView $300-1000/year) can eliminate these costs with open-source alternatives like FarmOS, AgOpenGPS, and Open FarmKit, saving $2,000-5,000 per year.
 
 ---
 
 #### 5. Downtime Cost Calculator
 
+![Downtime Cost Calculator](images/downtime-cost-calculator-header.jpg)
+
 Calculate and analyze the true cost of equipment downtime, enabling farmers to make informed decisions about repair, replacement, and preventive maintenance investments.
+
+**Capabilities:**
+- Calculate hourly downtime costs including direct, indirect, and opportunity costs
+- Analyze yield loss, quality degradation, and soil compaction
+- Compare repair costs vs downtime costs
+- Generate cost-benefit analysis for preventive maintenance
+- Track downtime patterns and identify problematic equipment
+- Calculate ROI of maintenance investments
+- Create reports for insurance and warranty claims
+
+**Use Case:** When equipment fails during critical harvest window, farmers can accurately calculate total costs including direct labor/rental costs, indirect yield/quality impacts, and opportunity costs of missed optimal timing to make informed repair vs replace decisions.
 
 ---
 
 #### 6. Fleet Intelligence Coordinator
 
+![Fleet Intelligence Coordinator](images/fleet-intelligence-coordinator-header.jpg)
+
 Coordinate mixed-brand equipment fleet operations for optimal efficiency and utilization across large-scale operations.
+
+**Capabilities:**
+- Real-time fleet scheduling and routing
+- Multi-brand equipment coordination (John Deere, Case IH, AGCO)
+- Resource allocation optimization (fuel, labor, inputs)
+- Equipment utilization tracking and analysis
+- Field routing optimization
+- Real-time fleet status dashboard
+- Cross-brand communication support
+
+**Use Case:** Large-scale farms with mixed-brand equipment can optimize scheduling, routing, and resource allocation across all equipment regardless of manufacturer, improving utilization and reducing idle time.
 
 ---
 
 #### 7. Regulatory Compliance Autopilot
 
+![Regulatory Compliance Autopilot](images/regulatory-compliance-autopilot-header.jpg)
+
 Automate regulatory reporting and compliance tracking for agricultural operations, including EPA, USDA, and state requirements.
+
+**Capabilities:**
+- Track all regulatory requirements (EPA, USDA, state licenses)
+- Automated compliance status monitoring
+- Alert system for deadlines and expiring licenses
+- Auto-generate required reports (pesticide logs, water usage)
+- Historical compliance records
+- Audit preparation support
+- Multi-jurisdiction support
+
+**Use Case:** Farmers can automatically track all regulatory requirements, receive alerts for upcoming deadlines, and generate required compliance reports without manual record-keeping or risk of missed requirements.
 
 ---
 
 #### 8. Vendor Lock-In Escape Kit
 
+![Vendor Lock-In Escape Kit](images/vendor-lock-escape-kit-header.jpg)
+
 Tools and strategies to escape vendor lock-in from equipment and software providers, regaining data sovereignty and reducing dependency costs.
+
+**Capabilities:**
+- Identify lock-in mechanisms (proprietary formats, encrypted ECUs, cloud-only)
+- Provide escape strategies and open alternatives
+- Data export from proprietary systems
+- Local infrastructure setup
+- Migration roadmaps
+- Freedom benefits analysis (data sovereignty, cost savings)
+- Open format adoption
+
+**Use Case:** Farmers locked into proprietary dealer ecosystems can escape by identifying lock-in mechanisms, implementing open alternatives, and maintaining their data locally, saving thousands annually and regaining full control.
 
 ---
 
 #### 9. Actual vs Promised Validator
 
+![Actual vs Promised Validator](images/actual-vs-promised-validator-header.jpg)
+
 Validate equipment performance against marketing claims and specifications, providing accurate performance verification.
+
+**Capabilities:**
+- Compare claimed vs actual performance metrics
+- Test fuel efficiency, accuracy, precision, coverage rates
+- Generate deviation analysis and pass/fail indicators
+- Performance rating system
+- Side-by-side comparison charts
+- Warranty claim support documentation
+- Evidence for equipment selection
+
+**Use Case:** Farmers can verify that equipment actually performs as marketed (fuel efficiency, yield monitor accuracy, guidance precision) before purchase or during warranty claims, preventing costly purchases of underperforming equipment.
 
 ---
 
 #### 10. Critical Timing Optimizer
 
+![Critical Timing Optimizer](images/critical-timing-optimizer-header.jpg)
+
 Optimize critical operations timing for weather conditions and operational efficiency, maximizing yield and minimizing risk.
+
+**Capabilities:**
+- Weather forecast analysis for optimal windows
+- Multi-factor decision matrices (weather, soil, labor, equipment)
+- Critical operations calendar with time constraints
+- Risk assessment for delayed operations
+- Opportunity cost calculation
+- Actionable timing recommendations
+- Historical window optimization
+
+**Use Case:** Farmers can identify optimal planting, spraying, and harvest windows based on weather forecasts, soil conditions, and operational factors, maximizing yield and minimizing risk of missed critical windows.
 
 ---
 
