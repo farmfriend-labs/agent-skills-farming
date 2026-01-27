@@ -1,6 +1,6 @@
 # AgentSkills.io Farming Skills
 
-Open source AgentSkills.io format skills for farmers. Comprehensive collection of agricultural skills for autonomous AI assistants, covering farm rehabilitation, JADAM natural farming, worm farming, ferments, weather monitoring, and agricultural technology development.
+Open source AgentSkills.io format skills for farmers.
 
 ---
 
@@ -25,51 +25,18 @@ skill-name/
 
 ---
 
-## Available Skills
+## Skill Categories
 
-### Weather Monitoring
-- **skill/weather-monitoring** - Real-time weather tracking, freeze alerts, thaw windows
-- **skill/weather-forecast** - Multi-day forecasting for planning
-- **skill/weather-automation** - Automated alerts for critical conditions
+This repository will contain skills for the following agricultural domains:
 
-### Farm Rehabilitation
-- **skill/farm-rehab** - Post-freeze damage assessment and recovery
-- **skill/infrastructure-inspection** - Pipe, equipment, and building checks
-- **skill/soil-health** - Soil analysis and remediation tracking
-
-### JADAM Natural Farming
-- **skill/jadam-intro** - Introduction to JADAM methods
-- **skill/jadam-ferments** - Ferment-based inputs (JWA, JLF, JLF+) recipes
-- **skill/jadam-wca** - Water-Capped Aerobics for inputs
-- **skill/jadam-sea-solution** - Sea water-based nutrient solutions
-
-### Worm Farming
-- **skill/worm-bin-setup** - Bin construction and population
-- **skill/worm-feeding** - Feeding schedules and materials
-- **skill/worm-harvest** - Casting collection and processing
-- **skill/worm-health** - Temperature, moisture, and activity monitoring
-
-### Ferments & Inputs
-- **skill/ferment-recipe** - Input recipes and protocols
-- **skill/ferment-temperature** - Temperature monitoring and control
-- **skill/ferment-tracking** - Batch logs and quality tracking
-- **skill/input-scheduling** - Input application timing and rates
-
-### Crop Management
-- **skill/crop-planting** - Schedules and best practices
-- **skill/crop-monitoring** - Growth stage tracking
-- **skill/crop-health** - Disease and pest detection
-- **skill/harvest-timing** - Optimal harvest windows
-
-### IoT & Sensors
-- **skill/sensor-setup** - Temperature, moisture, pH sensor deployment
-- **skill/sensor-data** - Data collection and storage
-- **skill/sensor-alerts** - Automated threshold notifications
-
-### Documentation
-- **skill/farm-logging** - Daily operation logs
-- **skill/farm-reports** - Weekly/monthly summaries
-- **skill/farm-planning** - Seasonal goals and milestones
+- **Weather Monitoring** - Real-time weather tracking, freeze alerts, thaw windows
+- **Farm Rehabilitation** - Post-freeze damage assessment and recovery
+- **JADAM Natural Farming** - Ferment-based inputs, JWA, JLF, JLF+, WCA
+- **Worm Farming** - Bin setup, feeding, health monitoring, harvesting
+- **Ferments & Inputs** - Recipes, protocols, temperature tracking, batch logs
+- **Crop Management** - Planting schedules, growth tracking, health monitoring
+- **IoT & Sensors** - Sensor deployment, data collection, automated alerts
+- **Documentation** - Daily logs, reports, seasonal planning
 
 ---
 
@@ -102,68 +69,6 @@ agent --skill ./skill/weather-monitoring
 
 # Or copy to agent skills directory
 cp -r skill/weather-monitoring ~/.agent/skills/
-```
-
----
-
-## Usage Examples
-
-### Weather Freeze Alert
-
-```
-User: Check for freeze conditions tonight.
-
-Agent: [Using weather-monitoring skill]
-Current temp: 28°F
-Tonight's low: 22°F
-Freeze alert in effect.
-Recommended actions:
-- Protect ferments
-- Insulate worm bins
-- Cover sensitive crops
-```
-
-### JADAM Ferment Recipe
-
-```
-User: Help me create a JWA ferment.
-
-Agent: [Using jadam-ferments skill]
-JWA (JADAM Water-soluble Amino acid) Recipe:
-
-Ingredients:
-- 100 kg waste fish (ground)
-- 10 kg brown sugar
-- 100 L water
-- 2 kg effective microorganisms (EM)
-
-Instructions:
-1. Mix fish and sugar in container
-2. Add water, stir thoroughly
-3. Add EM culture
-4. Seal with airlock
-5. Ferment 5-7 days at 25-30°C
-6. Strain liquid, store in airtight container
-
-Usage: Dilute 1:500 for foliar spray
-```
-
-### Worm Bin Health Check
-
-```
-User: Check worm bin conditions.
-
-Agent: [Using worm-health skill]
-Bin Status:
-- Temperature: 68°F (optimal)
-- Moisture: 75% (optimal)
-- Activity: High
-- Bedding: Needs refresh
-
-Recommendations:
-- Add fresh bedding material
-- Monitor feeding rate
-- No action needed on temperature/moisture
 ```
 
 ---
@@ -245,7 +150,7 @@ We welcome contributions from farmers, AI researchers, and agricultural technolo
 
 1. Fork the repository
 2. Create feature branch: `git checkout -b feature/my-skill`
-3. Add your skill following skill structure
+3. Add your skill following the skill structure
 4. Test with FF-Terminal or compatible agent
 5. Submit pull request with description
 
@@ -263,14 +168,14 @@ We welcome contributions from farmers, AI researchers, and agricultural technolo
 ## Roadmap
 
 ### Phase 1: Core Skills (Q1 2026)
-- [x] Weather monitoring
-- [x] Farm rehabilitation
-- [x] JADAM basic skills
-- [ ] Worm farming complete
-- [ ] Ferment tracking
+- [ ] Weather monitoring skills
+- [ ] Farm rehabilitation skills
+- [ ] JADAM basic skills
+- [ ] Worm farming skills
+- [ ] Ferment tracking skills
 
 ### Phase 2: Expansion (Q2 2026)
-- [ ] Crop management
+- [ ] Crop management skills
 - [ ] IoT sensor integration
 - [ ] Automated alerts
 - [ ] Data visualization
@@ -310,7 +215,7 @@ MIT License - Open source, free to use, modify, and distribute.
 
 ### Documentation
 
-See [FF-Docs](https://github.com/farmfriend-labs/ff-docs) for detailed guides and tutorials.
+See [FF-Docs](https://github.com/farmfriend-labs/ff-docs) for detailed guides and tutorials (coming soon).
 
 ### Community
 
@@ -326,9 +231,9 @@ Join the discussion in [Issues](https://github.com/farmfriend-labs/agent-skills-
 
 ## Related Projects
 
-- [FF-Terminal](https://github.com/farmfriend-labs/ff-terminal) - Autonomous AI terminal
-- [FF-Agriculture](https://github.com/farmfriend-labs/ff-agriculture) - Farm automation platform
-- [FF-JADAM](https://github.com/farmfriend-labs/ff-jadam) - JADAM natural farming implementation
+- [FF-Terminal](https://github.com/farmfriend-labs/ff-terminal) - Autonomous AI terminal (coming soon)
+- [FF-Agriculture](https://github.com/farmfriend-labs/ff-agriculture) - Farm automation platform (planned)
+- [FF-JADAM](https://github.com/farmfriend-labs/ff-jadam) - JADAM natural farming implementation (planned)
 
 ---
 
