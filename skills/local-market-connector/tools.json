@@ -1,0 +1,144 @@
+{
+  "name": "local-market-connector",
+  "version": "1.0.0",
+  "description": "Connect farmers with local markets, buyers, and direct sales opportunities",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 2 - Mid-Size Production Farms",
+  "keywords": [
+    "local-markets",
+    "direct-sales",
+    "buyers",
+    "CSA",
+    "farmers-market",
+    "food-hub"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "requests",
+      "version": ">= 2.26",
+      "required": true
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": ">= 4.9",
+      "required": false
+    },
+    {
+      "name": "pandas",
+      "version": ">= 1.3",
+      "required": false
+    },
+    {
+      "name": "geopy",
+      "version": ">= 2.2",
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "init-buyer-db",
+      "description": "Initialize buyer database",
+      "command": "python3 scripts/init_database.py"
+    },
+    {
+      "name": "add-buyer",
+      "description": "Add buyer to database",
+      "command": "python3 scripts/add_buyer.py"
+    },
+    {
+      "name": "search-buyers",
+      "description": "Search for buyers matching criteria",
+      "command": "python3 scripts/search_buyers.py"
+    },
+    {
+      "name": "import-buyers",
+      "description": "Import buyers from CSV/JSON",
+      "command": "python3 scripts/import_buyers.py"
+    },
+    {
+      "name": "scrape-buyers",
+      "description": "Scrape buyer directories",
+      "command": "python3/scripts/scrape_buyers.py"
+    },
+    {
+      "name": "generate-outreach",
+      "description": "Generate outreach email",
+      "command": "python3/scripts/generate_outreach.py"
+    },
+    {
+      "name": "track-communication",
+      "description": "Log buyer communication",
+      "command": "python3/scripts/log_communication.py"
+    },
+    {
+      "name": "create-order",
+      "description": "Create buyer order",
+      "command": "python3/scripts/create_order.py"
+    },
+    {
+      "name": "track-prices",
+      "description": "Track market prices",
+      "command": "python3/scripts/track_prices.py"
+    },
+    {
+      "name": "compare-prices",
+      "description": "Compare local vs. commodity prices",
+      "command": "python3/scripts/compare_prices.py"
+    },
+    {
+      "name": "analyze-demand",
+      "description": "Analyze seasonal demand",
+      "command": "python3/scripts/analyze_demand.py"
+    },
+    {
+      "name": "generate-report",
+      "description": "Generate buyer analysis report",
+      "command": "python3/scripts/generate_report.py"
+    }
+  ],
+
+  "buyer_types": [
+    "retail",
+    "wholesale",
+    "institutional",
+    "direct"
+  ],
+
+  "configuration": {
+    "max_delivery_distance_miles": 50,
+    "auto_backup_enabled": true,
+    "scrape_interval_days": 7
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "examples": [
+      "examples/find-buyers.md",
+      "examples/csa-setup.md",
+      "examples/outreach.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "Buyer not responding",
+      "Price negotiations stalled",
+      "Delivery logistics challenging",
+      "Web scraping blocked"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  }
+}

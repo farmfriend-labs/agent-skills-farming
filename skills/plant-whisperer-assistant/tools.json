@@ -1,0 +1,327 @@
+{
+  "name": "plant-whisperer-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered plant health monitoring, diagnosis, and personalized care recommendations",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 3 - Small Farmers/Homesteaders",
+  "keywords": [
+    "plant health",
+    "disease detection",
+    "pest identification",
+    "nutrient deficiency",
+    "computer vision",
+    "machine learning",
+    "gardening",
+    "horticulture"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "opencv-python",
+      "version": ">= 4.8.0",
+      "required": true
+    },
+    {
+      "name": "numpy",
+      "version": ">= 1.24.0",
+      "required": true
+    },
+    {
+      "name": "tensorflow",
+      "version": ">= 2.13.0",
+      "required": false,
+      "alternative": "torch>=2.0.0"
+    },
+    {
+      "name": "scikit-learn",
+      "version": ">= 1.3.0",
+      "required": true
+    },
+    {
+      "name": "pillow",
+      "version": ">= 10.0.0",
+      "required": true
+    },
+    {
+      "name": "requests",
+      "version": ">= 2.31.0",
+      "required": true
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "Camera/Smartphone",
+      "options": [
+        "Smartphone (iOS/Android)",
+        "Digital camera",
+        "Webcam"
+      ],
+      "requirements": "Minimum 1080p resolution, good lighting"
+    },
+    {
+      "name": "Microscope",
+      "options": [
+        "USB digital microscope (60x-200x)",
+        "Handheld magnifier"
+      ],
+      "required": false
+    },
+    {
+      "name": "Environmental Sensors",
+      "options": [
+        "Soil moisture sensor",
+        "pH meter",
+        "Light meter",
+        "Temperature/humidity sensor"
+      ],
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "setup-environment",
+      "description": "Initialize environment and install dependencies",
+      "command": "scripts/setup.sh",
+      "params": []
+    },
+    {
+      "name": "analyze-plant",
+      "description": "Analyze plant images for health issues",
+      "command": "python3 scripts/analyze_plant.py",
+      "params": ["image_path", "plant_id", "analysis_mode"]
+    },
+    {
+      "name": "identify-plant",
+      "description": "Identify plant species from image",
+      "command": "python3 scripts/identify_plant.py",
+      "params": ["image_path"]
+    },
+    {
+      "name": "add-plant",
+      "description": "Register a new plant in the database",
+      "command": "python3 scripts/add_plant.py",
+      "params": ["name", "species", "variety", "location", "planting_date"]
+    },
+    {
+      "name": "track-plant",
+      "description": "Track plant health over time",
+      "command": "python3 scripts/track_plant.py",
+      "params": ["plant_id"]
+    },
+    {
+      "name": "diagnose-issue",
+      "description": "Diagnose specific plant issue",
+      "command": "python3 scripts/diagnose.py",
+      "params": ["plant_id", "image_path", "symptoms"]
+    },
+    {
+      "name": "get-recommendations",
+      "description": "Get care recommendations for plant",
+      "command": "python3 scripts/recommendations.py",
+      "params": ["plant_id", "issue_type"]
+    },
+    {
+      "name": "monitor-environment",
+      "description": "Monitor environmental conditions",
+      "command": "python3 scripts/monitor_env.py",
+      "params": ["location"]
+    },
+    {
+      "name": "run-service",
+      "description": "Start plant monitoring service",
+      "command": "scripts/run.sh",
+      "params": []
+    },
+    {
+      "name": "test-system",
+      "description": "Run comprehensive tests",
+      "command": "scripts/test.sh",
+      "params": []
+    }
+  ],
+
+  "detection_capabilities": [
+    {
+      "name": "Disease Detection",
+      "accuracy": "85-95%",
+      "diseases": [
+        "Powdery mildew",
+        "Downy mildew",
+        "Early blight",
+        "Late blight",
+        "Rust",
+        "Root rot",
+        "Bacterial leaf spot",
+        "Bacterial wilt",
+        "Fire blight",
+        "Mosaic virus",
+        "Black spot",
+        "Anthracnose"
+      ]
+    },
+    {
+      "name": "Pest Identification",
+      "accuracy": "80-90%",
+      "pests": [
+        "Aphids",
+        "Spider mites",
+        "Whiteflies",
+        "Thrips",
+        "Caterpillars",
+        "Beetles",
+        "Slugs",
+        "Scale insects",
+        "Fungus gnats",
+        "Cutworms"
+      ]
+    },
+    {
+      "name": "Nutrient Deficiencies",
+      "accuracy": "90-95%",
+      "nutrients": [
+        "Nitrogen",
+        "Phosphorus",
+        "Potassium",
+        "Calcium",
+        "Magnesium",
+        "Sulfur",
+        "Iron",
+        "Manganese",
+        "Zinc",
+        "Boron",
+        "Copper",
+        "Molybdenum"
+      ]
+    },
+    {
+      "name": "Environmental Stress",
+      "accuracy": "85-90%",
+      "stressors": [
+        "Water stress (over/under)",
+        "Heat stress",
+        "Cold stress",
+        "Light stress (too much/little)",
+        "pH imbalance",
+        "Soil compaction"
+      ]
+    }
+  ],
+
+  "api_integrations": [
+    {
+      "name": "PlantNet",
+      "description": "AI plant identification",
+      "url": "https://my.api.plantnet.org/v1/identify",
+      "optional": true
+    },
+    {
+      "name": "Trefle",
+      "description": "Comprehensive plant database",
+      "url": "https://trefle.io/api/v1",
+      "optional": true
+    },
+    {
+      "name": "OpenWeatherMap",
+      "description": "Weather data and forecasts",
+      "url": "https://openweathermap.org/api",
+      "optional": true
+    },
+    {
+      "name": "USDA Plants Database",
+      "description": "Native plant database",
+      "url": "https://plants.usda.gov/",
+      "optional": true,
+      "free": true
+    }
+  ],
+
+  "supported_plants": [
+    "Vegetables (tomato, pepper, cucumber, lettuce, etc.)",
+    "Fruits (strawberry, blueberry, apple, peach, etc.)",
+    "Herbs (basil, mint, rosemary, thyme, etc.)",
+    "Flowers (rose, marigold, zinnia, sunflower, etc.)",
+    "Houseplants (pothos, snake plant, monstera, etc.)",
+    "Trees (fruit trees, ornamental trees)",
+    "Shrubs and bushes"
+  ],
+
+  "analysis_modes": [
+    {
+      "name": "basic",
+      "description": "Quick visual analysis",
+      "processing_time": "< 30 seconds",
+      "accuracy": "80-85%"
+    },
+    {
+      "name": "standard",
+      "description": "Comprehensive analysis with recommendations",
+      "processing_time": "30-60 seconds",
+      "accuracy": "85-90%"
+    },
+    {
+      "name": "comprehensive",
+      "description": "Full analysis with environmental context",
+      "processing_time": "60-120 seconds",
+      "accuracy": "90-95%"
+    }
+  ],
+
+  "safety_features": [
+    "Organic-first recommendations",
+    "Avoid harmful chemicals when possible",
+    "Warn about toxic treatments",
+    "Cross-check recommendations with plant toxicity",
+    "Child and pet safety warnings",
+    "Environmental impact assessments"
+  ],
+
+  "configuration": {
+    "default_analysis_mode": "standard",
+    "default_approach": "organic",
+    "ai_confidence_threshold": 0.75,
+    "max_image_storage_gb": 50,
+    "alert_severity_threshold": "warning"
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "examples": [
+      "examples/tomato-disease-diagnosis.md",
+      "examples/nutrient-deficiency-identification.md",
+      "examples/pest-outbreak-management.md",
+      "examples/seasonal-care-schedule.md"
+    ],
+    "references": [
+      "references/plant-diseases.md",
+      "references/nutrient-deficiencies.md",
+      "references/pest-guide.md",
+      "references/research-papers.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "Poor image quality",
+      "Inaccurate diagnoses",
+      "No improvement after treatment",
+      "Conflicting recommendations",
+      "Database errors"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  },
+
+  "data_privacy": {
+    "local_storage": "All images stored locally by default",
+    "optional_cloud": "Optional cloud API usage for enhanced identification",
+    "data_export": "Export all plant data in JSON format",
+    "data_deletion": "Complete data deletion capability"
+  }
+}

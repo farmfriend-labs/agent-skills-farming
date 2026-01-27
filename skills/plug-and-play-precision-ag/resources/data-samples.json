@@ -1,0 +1,116 @@
+{
+  "field_template": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-74.006000, 40.712800],
+      [-74.006000, 40.713800],
+      [-74.008000, 40.713800],
+      [-74.008000, 40.712800],
+      [-74.006000, 40.712800]
+    ]]
+  },
+  "prescription_template": {
+    "field_id": 1,
+    "prescription_name": "Fertilizer VRA 2025",
+    "input_type": "fertilizer",
+    "zones": [
+      {
+        "zone_id": 1,
+        "name": "High Yield Area",
+        "polygon": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-74.006000, 40.712800],
+            [-74.006500, 40.712800],
+            [-74.006500, 40.713000],
+            [-74.006000, 40.713000],
+            [-74.006000, 40.712800]
+          ]]
+        },
+        "rate": 180,
+        "rate_unit": "lbs/ac",
+        "product": "Urea 46-0-0"
+      },
+      {
+        "zone_id": 2,
+        "name": "Medium Yield Area",
+        "polygon": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-74.006500, 40.712800],
+            [-74.008000, 40.712800],
+            [-74.008000, 40.713800],
+            [-74.006500, 40.713800],
+            [-74.006500, 40.712800]
+          ]]
+        },
+        "rate": 150,
+        "rate_unit": "lbs/ac",
+        "product": "Urea 46-0-0"
+      }
+    ]
+  },
+  "implement_profile": {
+    "name": "16-Row Planter",
+    "manufacturer": "John Deere",
+    "model": "DB120",
+    "type": "planter",
+    "width": 60,
+    "sections": 48,
+    "isobus_compatible": true,
+    "can_address": 0x81,
+    "configuration": {
+      "row_spacing": 30,
+      "units": "inches",
+      "vacuum_pressure": 15,
+      "seed_type": "corn"
+    }
+  },
+  "operation_log": {
+    "field_id": 1,
+    "timestamp": "2025-04-15T08:30:00",
+    "log_type": "planting",
+    "message": "Started planting North Field",
+    "data": {
+      "operator": "John Smith",
+      "equipment": "JD8370R + JD DB120",
+      "seed_variety": "Dekalb DKC66-40",
+      "target_population": 34000,
+      "actual_population": 33850
+    }
+  },
+  "yield_data_sample": {
+    "points": [
+      {
+        "latitude": 40.712800,
+        "longitude": -74.006000,
+        "yield_bu_per_ac": 220,
+        "moisture_percent": 15.2,
+        "timestamp": "2025-10-15T10:30:00"
+      },
+      {
+        "latitude": 40.712801,
+        "longitude": -74.006001,
+        "yield_bu_per_ac": 225,
+        "moisture_percent": 15.1,
+        "timestamp": "2025-10-15T10:30:01"
+      },
+      {
+        "latitude": 40.712802,
+        "longitude": -74.006002,
+        "yield_bu_per_ac": 215,
+        "moisture_percent": 15.3,
+        "timestamp": "2025-10-15T10:30:02"
+      }
+    ],
+    "summary": {
+      "field_id": 1,
+      "harvest_date": "2025-10-15",
+      "crop": "corn",
+      "average_yield": 218,
+      "total_yield": 5645,
+      "acres_harvested": 25.87,
+      "average_moisture": 15.2
+    }
+  }
+}

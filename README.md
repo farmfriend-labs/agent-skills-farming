@@ -52,7 +52,7 @@ List of specific capabilities and use cases.
 
 ## Instructions
 
-How the AI agent should use this skill.
+How to AI agent should use this skill.
 
 ## Tools
 
@@ -129,7 +129,7 @@ Optional JSON file defining tool configurations:
 
 ## Skill Categories
 
-This repository contains skills for the following agricultural domains:
+This repository contains skills for following agricultural domains:
 
 - **Weather Monitoring** - Real-time weather tracking, freeze alerts, thaw windows
 - **Farm Rehabilitation** - Post-freeze damage assessment and recovery
@@ -139,6 +139,206 @@ This repository contains skills for the following agricultural domains:
 - **Crop Management** - Planting schedules, growth tracking, health monitoring
 - **IoT & Sensors** - Sensor deployment, data collection, automated alerts
 - **Documentation** - Daily logs, reports, seasonal planning
+
+---
+
+## Skills
+
+### Tier 1: Industrial Operations (5,000+ acres)
+
+#### 1. Universal Equipment Translator
+
+![Universal Equipment Translator](images/universal-equipment-translator-header.jpg)
+
+Enables mixed-fleet equipment interoperability by translating between proprietary agricultural equipment protocols. Works with John Deere, Case IH, AGCO, and other major brands using ISO 11783/ISOBUS standards.
+
+**Capabilities:**
+- Translate between proprietary protocols and ISOBUS
+- Support multiple manufacturer equipment simultaneously
+- Real-time CAN bus message translation
+- Cross-brand fleet coordination
+- Offline operation with cached translations
+- Open-source alternative to dealer software
+
+**Use Case:** Farmers with mixed-brand equipment (John Deere tractors, Case IH planters, AGCO sprayers) can now operate all equipment from a single unified interface without expensive dealer software subscriptions.
+
+---
+
+#### 2. Emergency Diagnostics Liberator
+
+Emergency equipment diagnostics without dealer tools, providing farmers with immediate access to diagnostic information, error code interpretation, and repair guidance when equipment fails during critical operations.
+
+---
+
+#### 3. Data Synthesis Dashboard
+
+Unified dashboard that synthesizes equipment, weather, operations, and farm data into actionable intelligence for agricultural decision-making.
+
+---
+
+#### 4. Subscription Cost Eliminator
+
+Eliminate dealer subscription services and cloud dependencies by building open-source alternatives and self-hosted solutions for agricultural equipment and software.
+
+---
+
+#### 5. Downtime Cost Calculator
+
+Calculate and analyze the true cost of equipment downtime, enabling farmers to make informed decisions about repair, replacement, and preventive maintenance investments.
+
+---
+
+#### 6. Fleet Intelligence Coordinator
+
+Coordinate mixed-brand equipment fleet operations for optimal efficiency and utilization across large-scale operations.
+
+---
+
+#### 7. Regulatory Compliance Autopilot
+
+Automate regulatory reporting and compliance tracking for agricultural operations, including EPA, USDA, and state requirements.
+
+---
+
+#### 8. Vendor Lock-In Escape Kit
+
+Tools and strategies to escape vendor lock-in from equipment and software providers, regaining data sovereignty and reducing dependency costs.
+
+---
+
+#### 9. Actual vs Promised Validator
+
+Validate equipment performance against marketing claims and specifications, providing accurate performance verification.
+
+---
+
+#### 10. Critical Timing Optimizer
+
+Optimize critical operations timing for weather conditions and operational efficiency, maximizing yield and minimizing risk.
+
+---
+
+### Tier 2: Mid-Size Production Farms (100-2,000 acres)
+
+#### 11. Plug and Play Precision Agriculture
+
+Simple, affordable precision agriculture setup for smaller operations that works out of the box without technical expertise.
+
+---
+
+#### 12. Mixed Fleet Coordinator
+
+Coordinate mixed-brand smaller equipment for efficient operations with basic communication and data sharing.
+
+---
+
+#### 13. Repair Decision Assistant
+
+Help farmers make informed repair vs replace decisions for equipment using comprehensive analysis of costs, age, and utilization.
+
+---
+
+#### 14. Actionable Weather Alerts
+
+Weather alerts with specific, actionable recommendations for farm operations - not generic forecasts but specific guidance on when to spray, plant, or protect.
+
+---
+
+#### 15. Input Cost Opportunist
+
+Find opportunities for input cost savings through timing and market analysis, identifying optimal buying windows for fertilizer, seed, chemicals, and fuel.
+
+---
+
+#### 16. Field History Intelligence
+
+Track and analyze field history data for informed decisions, maintaining comprehensive records of yield, inputs, pests, soil tests, and operations.
+
+---
+
+#### 17. Local Market Connector
+
+Connect farmers with local markets, buyers, and selling opportunities including farmers markets, CSA subscriptions, restaurants, and wholesale buyers.
+
+---
+
+#### 18. Grant Money Finder
+
+Find agricultural grants and funding opportunities including USDA programs, state agricultural grants, conservation programs, and research grants.
+
+---
+
+#### 19. Invisible Data Logger
+
+Log farm data without expensive proprietary equipment using low-cost alternatives like Raspberry Pi, Arduino, and smartphone apps.
+
+---
+
+#### 20. One Screen Mission Control
+
+Single-screen operations control center for farm management, unifying GPS guidance, weather, equipment status, tasks, and alerts.
+
+---
+
+### Tier 3: Small Farmers and Homesteaders (<5 acres)
+
+#### 21. Plant Whisperer Assistant
+
+Plant health monitoring and advice for gardens and small farms, providing early detection of nutrient deficiencies, pests, and disease.
+
+---
+
+#### 22. Grow Timing Calendar
+
+Growth and harvest timing calendar for optimal planting and harvesting, showing frost dates, growing windows, and succession planting schedules.
+
+---
+
+#### 23. Garden Layout Optimizer
+
+Optimize garden layouts for efficiency and productivity using companion planting, sun exposure analysis, and spacing optimization.
+
+---
+
+#### 24. Harvest Preservation Guide
+
+Food preservation techniques and timing for extending harvest bounty, covering canning, freezing, drying, fermenting, and root cellaring.
+
+---
+
+#### 25. Soil Health Builder
+
+Build and maintain healthy soil for sustainable agriculture using compost, cover crops, reduced tillage, and organic amendments.
+
+---
+
+#### 26. Seed Sovereignty Guide
+
+Seed saving and sovereignty guidance for independence, explaining heirloom varieties, open-pollinated seed types, and cost savings from saving seeds.
+
+---
+
+#### 27. Pest Protector Organic
+
+Organic pest protection strategies for sustainable pest management using beneficial insects, neem oil, companion planting, and integrated pest management.
+
+---
+
+#### 28. Water Wisdom Helper
+
+Water conservation and management for sustainable agriculture, covering irrigation efficiency, water quality, and conservation strategies.
+
+---
+
+#### 29. Season Extension Planner
+
+Extend growing seasons with techniques and planning using hoop houses, cold frames, row covers, and succession planting.
+
+---
+
+#### 30. Learning From Experience
+
+Track and learn from farm experiences for continuous improvement, capturing successes, failures, experiments, and observations.
 
 ---
 
@@ -155,10 +355,10 @@ cd agent-skills-farming
 
 ```bash
 # Copy skill to FF-Terminal skills directory
-cp -r skills/weather-monitoring ~/.ff-terminal/skills/
+cp -r skills/universal-equipment-translator ~/.ff-terminal/skills/
 
 # Load skill via FF-Terminal
-ff-terminal --load-skill weather-monitoring
+ff-terminal --load-skill universal-equipment-translator
 ```
 
 ### Use with Other Agents
@@ -167,10 +367,10 @@ Skills use standard AgentSkills.io format and work with compatible agents:
 
 ```bash
 # Load skill into agent context
-agent --skill ./skills/weather-monitoring
+agent --skill ./skills/universal-equipment-translator
 
 # Or copy to agent skills directory
-cp -r skills/weather-monitoring ~/.agent/skills/
+cp -r skills/universal-equipment-translator ~/.agent/skills/
 ```
 
 ---

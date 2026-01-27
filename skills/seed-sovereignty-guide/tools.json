@@ -1,0 +1,204 @@
+{
+  "name": "seed-sovereignty-guide",
+  "version": "1.0.0",
+  "description": "Comprehensive seed saving and sovereignty guidance for small farmers and homesteaders",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 3 - Small Farmers/Homesteaders",
+  "keywords": [
+    "seed saving",
+    "seed sovereignty",
+    "heirloom",
+    "open-pollinated",
+    "germination",
+    "seed storage",
+    "genetic diversity",
+    "seed exchange"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "python3-requests",
+      "version": ">= 2.25",
+      "required": false
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "Temperature/Humidity Sensor",
+      "options": [
+        "DHT22",
+        "BME280",
+        "SHT31",
+        "USB temperature logger"
+      ],
+      "required": false
+    },
+    {
+      "name": "Digital Scale",
+      "options": [
+        "Kitchen scale (0.1g precision)",
+        "Jewelry scale (0.01g precision)"
+      ],
+      "required": false
+    },
+    {
+      "name": "Food Dehydrator",
+      "options": [
+        "Excalibur",
+        "Nesco",
+        "Hamilton Beach"
+      ],
+      "required": false
+    },
+    {
+      "name": "Refrigerator/Freezer",
+      "options": [
+        "Standard refrigerator",
+        "Chest freezer"
+      ],
+      "required": false
+    },
+    {
+      "name": "Seed Cleaning Equipment",
+      "options": [
+        "Mesh screens (multiple sizes)",
+        "Winnowing fan",
+        "Seed sieves"
+      ],
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "setup-database",
+      "description": "Initialize seed database with schema",
+      "command": "scripts/setup.sh",
+      "params": ["db_path"]
+    },
+    {
+      "name": "add-seed",
+      "description": "Add new seed entry to database",
+      "command": "python3 scripts/seed_manager.py",
+      "params": ["variety", "crop_type", "year", "quantity"]
+    },
+    {
+      "name": "record-germination",
+      "description": "Record germination test results",
+      "command": "python3 scripts/germination_test.py",
+      "params": ["seed_id", "seeds_tested", "seeds_germinated"]
+    },
+    {
+      "name": "check-viability",
+      "description": "Check seed viability and recommend replacement",
+      "command": "python3 scripts/viability_checker.py",
+      "params": []
+    },
+    {
+      "name": "storage-monitor",
+      "description": "Monitor storage conditions and alert if out of range",
+      "command": "python3 scripts/storage_monitor.py",
+      "params": []
+    },
+    {
+      "name": "lookup-crop",
+      "description": "Get crop-specific seed saving information",
+      "command": "python3 scripts/crop_lookup.py",
+      "params": ["crop_name"]
+    },
+    {
+      "name": "calculate-isolation",
+      "description": "Calculate isolation requirements for varieties",
+      "command": "python3 scripts/isolation_calculator.py",
+      "params": ["crop_type", "num_varieties"]
+    },
+    {
+      "name": "export-inventory",
+      "description": "Export seed inventory to file",
+      "command": "python3 scripts/export_inventory.py",
+      "params": ["format"]
+    },
+    {
+      "name": "test-germination",
+      "description": "Guide through germination testing process",
+      "command": "python3 scripts/germination_guide.py",
+      "params": ["seed_id"]
+    }
+  ],
+
+  "crop_types": [
+    "tomato",
+    "pepper",
+    "eggplant",
+    "beans",
+    "peas",
+    "lettuce",
+    "corn",
+    "squash",
+    "cucumber",
+    "melon",
+    "beets",
+    "carrots",
+    "onions",
+    "cabbage",
+    "broccoli",
+    "kale",
+    "spinach",
+    "radishes",
+    "turnips",
+    "parsnips"
+  ],
+
+  "pollination_types": [
+    "self-pollinating",
+    "cross-pollinating",
+    "biennial"
+  ],
+
+  "storage_conditions": {
+    "ideal": {
+      "temp_celsius": "5-10",
+      "humidity_pct": "40-60"
+    },
+    "acceptable": {
+      "temp_celsius": "0-15",
+      "humidity_pct": "30-70"
+    }
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "crop_guides": "references/crop-specific-guides.md",
+    "legal_rights": "references/legal-rights.md",
+    "storage_research": "references/storage-research.md",
+    "examples": [
+      "examples/tomato-seed-saving.md",
+      "examples/corn-isolation.md",
+      "examples/bean-saving.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "Moldy seeds during storage",
+      "Low germination rates",
+      "Varieties crossed (off-type plants)",
+      "Plants bolting prematurely",
+      "Seedlings weak or stunted",
+      "Seeds not setting (no seed production)"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  }
+}

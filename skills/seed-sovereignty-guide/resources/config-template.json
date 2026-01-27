@@ -1,0 +1,88 @@
+{
+  "storage": {
+    "default_temperature_celsius": 5,
+    "default_humidity_percent": 50,
+    "monitoring_enabled": true,
+    "monitoring_interval_hours": 24,
+    "alerts_enabled": true,
+    "alert_temp_min_celsius": 0,
+    "alert_temp_max_celsius": 15,
+    "alert_humidity_min_percent": 30,
+    "alert_humidity_max_percent": 70
+  },
+  "germination": {
+    "minimum_germination_percent": 70,
+    "recommended_test_seeds": 20,
+    "retest_interval_days": 365,
+    "replace_below_percent": 50
+  },
+  "viability": {
+    "default_viability_years": 3,
+    "recommend_replacement_years": 4,
+    "crop_specific": {
+      "tomato": 4,
+      "beans": 3,
+      "peas": 3,
+      "lettuce": 2,
+      "corn": 1,
+      "squash": 4,
+      "cucumber": 5,
+      "pepper": 2,
+      "eggplant": 4,
+      "beets": 4,
+      "carrots": 3,
+      "onions": 1,
+      "cabbage": 4,
+      "broccoli": 4,
+      "kale": 4
+    }
+  },
+  "exchange": {
+    "enabled": false,
+    "api_url": "https://api.seed-exchange.org/v1",
+    "api_key": "",
+    "share_anonymous_data": false
+  },
+  "export": {
+    "default_format": "json",
+    "export_path": "/var/lib/seed-sovereignty/exports",
+    "include_germination_history": true,
+    "include_variety_characteristics": true
+  },
+  "database": {
+    "path": "/opt/seed-sovereignty/seeds.db",
+    "backup_enabled": true,
+    "backup_interval_days": 7,
+    "backup_path": "/var/lib/seed-sovereignty/backups",
+    "max_backups": 10
+  },
+  "logging": {
+    "level": "info",
+    "path": "/var/log/seed-sovereignty/seed-sovereignty.log",
+    "max_size_mb": 100,
+    "backup_count": 5
+  },
+  "notifications": {
+    "enabled": false,
+    "email": {
+      "enabled": false,
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "from_address": "",
+      "to_addresses": []
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "",
+      "events": ["low_germination", "storage_alert"]
+    }
+  },
+  "ui": {
+    "default_sort_by": "year_saved",
+    "default_sort_order": "desc",
+    "items_per_page": 25,
+    "show_variety_images": false
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "name": "field-history-intelligence",
+  "version": "1.0.0",
+  "description": "Comprehensive field history tracking, analysis, and decision intelligence system for agricultural operations",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 2 - Mid-Size Production Farms",
+  "keywords": [
+    "field-history",
+    "crop-analysis",
+    "soil-health",
+    "yield-tracking",
+    "input-optimization",
+    "data-analysis",
+    "decision-support"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "pandas",
+      "version": ">= 1.3",
+      "required": true
+    },
+    {
+      "name": "numpy",
+      "version": ">= 1.21",
+      "required": true
+    },
+    {
+      "name": "matplotlib",
+      "version": ">= 3.4",
+      "required": false
+    },
+    {
+      "name": "pillow",
+      "version": ">= 8.3",
+      "required": false
+    },
+    {
+      "name": "pytesseract",
+      "version": ">= 0.3.8",
+      "required": false
+    },
+    {
+      "name": "tabula-py",
+      "version": ">= 2.3",
+      "required": false
+    },
+    {
+      "name": "requests",
+      "version": ">= 2.26",
+      "required": false
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "Storage",
+      "options": [
+        "SSD or HDD (minimum 100GB recommended)",
+        "USB drive for backups"
+      ],
+      "required": true
+    },
+    {
+      "name": "Scanner",
+      "options": [
+        "Flatbed scanner for paper records",
+        "Mobile scanner app for receipts"
+      ],
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "init-database",
+      "description": "Initialize field history database with schema",
+      "command": "python3 scripts/init_database.py",
+      "params": ["database_path"]
+    },
+    {
+      "name": "import-csv",
+      "description": "Import field data from CSV files",
+      "command": "python3 scripts/import_csv.py",
+      "params": ["csv_file", "data_type", "season"]
+    },
+    {
+      "name": "import-json",
+      "description": "Import field data from JSON files",
+      "command": "python3 scripts/import_json.py",
+      "params": ["json_file", "season"]
+    },
+    {
+      "name": "import-pdf",
+      "description": "Extract data from PDF reports (soil tests, receipts)",
+      "command": "python3 scripts/import_pdf.py",
+      "params": ["pdf_file", "document_type"]
+    },
+    {
+      "name": "import-image",
+      "description": "OCR extraction from images of paper records",
+      "command": "python3 scripts/import_image.py",
+      "params": ["image_file", "record_type"]
+    },
+    {
+      "name": "analyze-yields",
+      "description": "Analyze yield trends and patterns",
+      "command": "python3 scripts/analyze_yields.py",
+      "params": ["field_name", "years"]
+    },
+    {
+      "name": "analyze-inputs",
+      "description": "Analyze input efficiency and costs",
+      "command": "python3 scripts/analyze_inputs.py",
+      "params": ["field_name", "season"]
+    },
+    {
+      "name": "analyze-soil",
+      "description": "Analyze soil health trends",
+      "command": "python3/scripts/analyze_soil.py",
+      "params": ["field_name"]
+    },
+    {
+      "name": "compare-varieties",
+      "description": "Compare crop variety performance",
+      "command": "python3/scripts/compare_varieties.py",
+      "params": ["crop_type", "years"]
+    },
+    {
+      "name": "generate-report",
+      "description": "Generate comprehensive field report",
+      "command": "python3/scripts/generate_report.py",
+      "params": ["report_type", "field_name", "season", "output_format"]
+    },
+    {
+      "name": "visualize-data",
+      "description": "Create visualizations from field data",
+      "command": "python3/scripts/visualize.py",
+      "params": ["chart_type", "data_type", "field_name", "output_file"]
+    },
+    {
+      "name": "export-data",
+      "description": "Export field data in various formats",
+      "command": "python3/scripts/export_data.py",
+      "params": ["export_format", "field_name", "season", "output_file"]
+    },
+    {
+      "name": "backup-database",
+      "description": "Create backup of field history database",
+      "command": "python3/scripts/backup.py",
+      "params": ["backup_path"]
+    },
+    {
+      "name": "restore-database",
+      "description": "Restore database from backup",
+      "command": "python3/scripts/restore.py",
+      "params": ["backup_file"]
+    },
+    {
+      "name": "validate-data",
+      "description": "Validate imported data for consistency",
+      "command": "python3/scripts/validate_data.py",
+      "params": ["table_name"]
+    },
+    {
+      "name": "search-records",
+      "description": "Search field history records",
+      "command": "python3/scripts/search.py",
+      "params": ["search_term", "table_name", "date_range"]
+    }
+  ],
+
+  "data_types": [
+    {
+      "name": "planting",
+      "description": "Crop planting records with variety, rates, dates",
+      "import_formats": ["csv", "json", "manual"]
+    },
+    {
+      "name": "harvest",
+      "description": "Harvest records with yield, moisture, quality",
+      "import_formats": ["csv", "json", "manual"]
+    },
+    {
+      "name": "inputs",
+      "description": "Fertilizer, chemical, seed applications",
+      "import_formats": ["csv", "json", "manual", "pdf"]
+    },
+    {
+      "name": "soil_tests",
+      "description": "Soil test results from laboratory",
+      "import_formats": ["csv", "json", "pdf", "image"]
+    },
+    {
+      "name": "weather",
+      "description": "Daily weather observations",
+      "import_formats": ["csv", "json", "api"]
+    },
+    {
+      "name": "equipment",
+      "description": "Equipment usage and maintenance records",
+      "import_formats": ["csv", "json", "manual"]
+    },
+    {
+      "name": "observations",
+      "description": "Field scouting notes and observations",
+      "import_formats": ["json", "manual", "image"]
+    },
+    {
+      "name": "financial",
+      "description": "Cost and revenue records",
+      "import_formats": ["csv", "json", "manual", "pdf"]
+    }
+  ],
+
+  "analysis_types": [
+    {
+      "name": "trend_analysis",
+      "description": "Multi-year trend analysis of yields, costs, soil health"
+    },
+    {
+      "name": "comparative_analysis",
+      "description": "Compare fields, varieties, years, or treatments"
+    },
+    {
+      "name": "correlation_analysis",
+      "description": "Identify correlations between variables and outcomes"
+    },
+    {
+      "name": "pattern_recognition",
+      "description": "Identify recurring patterns and anomalies"
+    },
+    {
+      "name": "cost_efficiency",
+      "description": "Calculate cost per unit production and optimization opportunities"
+    },
+    {
+      "name": "soil_health_trends",
+      "description": "Track soil health parameter changes over time"
+    },
+    {
+      "name": "variety_performance",
+      "description": "Compare variety performance across conditions"
+    },
+    {
+      "name": "input_optimization",
+      "description": "Analyze input efficiency and recommend adjustments"
+    }
+  ],
+
+  "visualization_types": [
+    {
+      "name": "yield_trend",
+      "description": "Line chart showing yield trends over time"
+    },
+    {
+      "name": "yield_comparison",
+      "description": "Bar chart comparing yields across fields or varieties"
+    },
+    {
+      "name": "input_efficiency",
+      "description": "Cost per bushel comparison chart"
+    },
+    {
+      "name": "soil_health",
+      "description": "Multi-line chart of soil parameters over time"
+    },
+    {
+      "name": "variety_matrix",
+      "description": "Heat map of variety performance"
+    },
+    {
+      "name": "planting_date_impact",
+      "description": "Scatter plot of yield vs. planting date"
+    },
+    {
+      "name": "weather_correlation",
+      "description": "Correlation plots between weather and yield"
+    }
+  ],
+
+  "report_types": [
+    {
+      "name": "end_of_season",
+      "description": "Comprehensive summary of entire season"
+    },
+    {
+      "name": "crop_comparison",
+      "description": "Compare crop performance across fields"
+    },
+    {
+      "name": "input_efficiency",
+      "description": "Input usage and cost analysis"
+    },
+    {
+      "name": "soil_health",
+      "description": "Soil test trend analysis"
+    },
+    {
+      "name": "variety_recommendation",
+      "description": "Variety selection recommendations"
+    },
+    {
+      "name": "financial_summary",
+      "description": "Revenue, costs, and profitability"
+    }
+  ],
+
+  "configuration": {
+    "default_unit_system": "imperial",
+    "default_currency": "USD",
+    "analysis_depth_years": 5,
+    "auto_backup_enabled": true,
+    "backup_interval": "daily",
+    "chart_format": "png",
+    "chart_dpi": 150
+  },
+
+  "export_formats": [
+    "csv",
+    "json",
+    "excel",
+    "pdf"
+  ],
+
+  "api_endpoints": {
+    "weather_apis": {
+      "noaa": "https://www.ncdc.noaa.gov/cdo-web/api/v2",
+      "weather_gov": "https://api.weather.gov",
+      "openweathermap": "https://api.openweathermap.org/data/2.5"
+    }
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "examples": [
+      "examples/basic-import.md",
+      "examples/yield-analysis.md",
+      "examples/input-optimization.md",
+      "examples/soil-health-analysis.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "CSV import fails",
+      "PDF extraction fails",
+      "Data validation errors",
+      "Unexpected yield trends",
+      "Missing correlations",
+      "Slow database queries"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  }
+}

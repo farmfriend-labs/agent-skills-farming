@@ -1,0 +1,140 @@
+{
+  "name": "invisible-data-logger",
+  "version": "1.0.0",
+  "description": "Log agricultural data using affordable hardware and open-source tools",
+  "author": "FarmFriend Terminal Labs",
+  "license": "MIT",
+  "category": "Tier 2 - Mid-Size Production Farms",
+  "keywords": [
+    "data-logging",
+    "sensors",
+    "mobile-collection",
+    "offline",
+    "low-cost"
+  ],
+
+  "dependencies": [
+    {
+      "name": "python3",
+      "version": ">= 3.8",
+      "required": true
+    },
+    {
+      "name": "sqlite3",
+      "version": ">= 3.0",
+      "required": true
+    },
+    {
+      "name": "SpeechRecognition",
+      "version": ">= 3.8",
+      "required": false
+    },
+    {
+      "name": "pandas",
+      "version": ">= 1.3",
+      "required": false
+    }
+  ],
+
+  "hardware": [
+    {
+      "name": "Mobile Device",
+      "options": [
+        "Smartphone with GPS and camera",
+        "Tablet for easier data entry"
+      ],
+      "required": true
+    },
+    {
+      "name": "Sensors (Optional)",
+      "options": [
+        "Temperature/Humidity sensor ($10-20)",
+        "Soil moisture sensor ($15-30)",
+        "Rain gauge ($25-50)"
+      ],
+      "required": false
+    }
+  ],
+
+  "tools": [
+    {
+      "name": "init-database",
+      "description": "Initialize data logging database",
+      "command": "python3 scripts/init_database.py"
+    },
+    {
+      "name": "log-observation",
+      "description": "Record field observation",
+      "command": "python3/scripts/log_observation.py"
+    },
+    {
+      "name": "voice-log",
+      "description": "Capture voice notes",
+      "command": "python3/scripts/voice_log.py"
+    },
+    {
+      "name": "add-sensor",
+      "description": "Register sensor for data collection",
+      "command": "python3/scripts/add_sensor.py"
+    },
+    {
+      "name": "read-sensor",
+      "description": "Capture sensor reading",
+      "command": "python3/scripts/read_sensor.py"
+    },
+    {
+      "name": "export-data",
+      "description": "Export collected data",
+      "command": "python3/scripts/export_data.py"
+    },
+    {
+      "name": "backup-data",
+      "description": "Backup data to external storage",
+      "command": "python3/scripts/backup.py"
+    },
+    {
+      "name": "sync-data",
+      "description": "Sync mobile data to central storage",
+      "command": "python3/scripts/sync.py"
+    },
+    {
+      "name": "create-reminder",
+      "description": "Set up data collection reminder",
+      "command": "python3/scripts/create_reminder.py"
+    }
+  ],
+
+  "data_types": [
+    "field_observations",
+    "equipment_logs",
+    "input_applications",
+    "weather_observations",
+    "sensor_readings"
+  ],
+
+  "configuration": {
+    "auto_backup_enabled": true,
+    "sync_on_wifi": true,
+    "voice_recognition_enabled": true,
+    "offline_mode": true
+  },
+
+  "documentation": {
+    "main": "SKILL.md",
+    "examples": [
+      "examples/mobile-setup.md",
+      "examples/sensor-setup.md",
+      "examples/voice-logging.md"
+    ]
+  },
+
+  "troubleshooting": {
+    "common_issues": [
+      "Mobile app not syncing",
+      "GPS not capturing",
+      "Sensor not reading",
+      "Export fails"
+    ],
+    "see_also": "SKILL.md#troubleshooting"
+  }
+}
