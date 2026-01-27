@@ -139,6 +139,28 @@ This repository contains skills for following agricultural domains:
 - **Crop Management** - Planting schedules, growth tracking, health monitoring
 - **IoT & Sensors** - Sensor deployment, data collection, automated alerts
 - **Documentation** - Daily logs, reports, seasonal planning
+- **Image Generation** - AI-powered visual content creation for marketing, documentation, and educational materials
+
+---
+
+## Featured Skills
+
+### Nano Banana Image Generator
+
+Google Gemini 2.5 Flash Image (Nano Banana) model for generating, editing, and creating AI-powered visual content including infographics, product photos, illustrations, and more.
+
+**Capabilities:**
+- Generate images from natural language descriptions
+- Create multi-panel infographics with data visualizations
+- Edit existing images with text prompts
+- Multiple aspect ratios and resolutions (1K, 2K, 4K)
+- Multi-turn conversations for iterative refinement
+- Google Search grounding for real-time data
+- Character consistency across multiple images
+
+**Use Case:** Create professional agricultural infographics, product photography for marketing, educational diagrams for extension materials, and technical illustrations without hiring designers.
+
+---
 
 ---
 
