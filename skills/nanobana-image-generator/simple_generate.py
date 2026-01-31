@@ -10,7 +10,7 @@ import google.generativeai as genai
 from pathlib import Path
 
 # Configuration
-API_KEY = os.getenv('GOOGLE_API_KEY', 'AIzaSyC2Og7JDCG2jl8Gd_uNaiBpcD8mFZ_aANs')
+API_KEY = os.getenv('GOOGLE_API_KEY', '')
 OUTPUT_DIR = Path('/home/scrimwiggins/clawd/skills/nanobana-image-generator/outputs/images')
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
